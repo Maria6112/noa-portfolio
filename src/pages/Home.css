@@ -1,0 +1,52 @@
+@import "../styles/variables.css";
+
+.home-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* min-height: 100vh; */
+  /* background-color: #f7f5f54a; */
+  padding: 80px;
+  color: var(--primary-color);
+  justify-content: center;
+}
+
+.animation-title {
+  color: var(--primary-color);
+  font-size: 64px;
+  font-weight: bold;
+  display: inline-block;
+  flex-wrap: wrap;
+  margin-top: 0px;
+  white-space: nowrap;
+  font-family: var(--animation-font);
+}
+
+.animation-title span {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: slideIn 0.5s forwards;
+  font-family: var(--animation-font);
+}
+
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.vertical-line {
+  width: 2px;
+  height: 0; /* стартовая высота */
+  background-color: var(--primary-color);
+  margin: 20px auto 0; /* отступ сверху + выравнивание по центру */
+  animation: growLine 1s ease-out 1.2s forwards; /* задержка, чтобы начиналась после текста */
+}
+
+@keyframes growLine {
+  to {
+    height: 100px; /* итоговая высота полосы */
+    background: linear-gradient(to bottom, #000, #aaa);
+  }
+}
