@@ -72,7 +72,7 @@ const VideoGallery = () => {
   const [selectedVideo, setSelectedVideo] = useState(null);
 
   return (
-    <div className="video-gallery">
+    <div className="video-gallery ">
       {videos.map((video) => (
         <div
           key={video.id}
@@ -97,7 +97,7 @@ const VideoGallery = () => {
             <img src={video.thumbnail} alt={video.title} />
             <div className="play-button">▶</div>
           </div>
-          {/* <p>{video.title}</p> */}
+          <p>{video.title}</p>
         </div>
       ))}
 

@@ -1,0 +1,84 @@
+.packages-container {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: "Poppins", sans-serif;
+}
+
+.package-section {
+  margin-bottom: 80px;
+}
+
+.package-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: var(--primary-color);
+  text-align: center;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.package-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  padding: 25px 20px;
+  margin-bottom: 30px;
+  color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+/* .package-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.package-card:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.package-card:nth-child(4) {
+  animation-delay: 0.6s;
+} */
+.package-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.package-card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: var(--secondary-color);
+}
+
+.package-card p {
+  font-size: 1rem;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+/* Light theme support */
+:root.light .package-card {
+  background: #fff;
+  color: #111;
+  border: 1px solid #ddd;
+}
+
+:root.light .package-card h2 {
+  color: var(--primary-color);
+}
+
+:root.light .package-card p {
+  color: #333;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  .package-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+
+  .package-section h1 {
+    grid-column: span 3;
+  }
+}

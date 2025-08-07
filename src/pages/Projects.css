@@ -25,3 +25,9 @@
     opacity: 1;
   }
 }
+
+@media (max-width: 768px) {
+  .projects-container h1 {
+    font-size: 42px;
+  }
+}

@@ -6,6 +6,8 @@ const Home = () => {
 
   return (
     <section id="home">
+      {/* <h1 data-aos="fade-up">TEST ANIMATION</h1> */}
+
       <div className="home-container">
         <div className="animation-title">
           <h1 className="animation-title">
