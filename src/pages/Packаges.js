@@ -1,7 +1,10 @@
 import React from "react";
 import "./Packages.css";
+import { useTranslation } from "react-i18next";
 
 const Packages = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="packages-container">
       <section
@@ -9,19 +12,19 @@ const Packages = () => {
         data-aos="fade-up"
         data-aos-delay="0"
       >
-        <h1>Wedding Packages</h1>
+        <h1>{t("packages.wedding")}</h1>
         <div className="package-card">
-          <h2>Basic</h2>
+          <h2>{t("packages.basic")}</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </div>
         <div className="package-card" data-aos="fade-up">
-          <h2>Premium</h2>
+          <h2>{t("packages.premium")}</h2>
           <p>
             Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.
           </p>
         </div>
         <div className="package-card">
-          <h2>Luxury</h2>
+          <h2>{t("packages.luxury")}</h2>
           <p>
             Donec sollicitudin molestie malesuada. Nulla quis lorem ut libero.
           </p>
@@ -33,19 +36,19 @@ const Packages = () => {
         data-aos="fade-up"
         data-aos-delay="0"
       >
-        <h1>Business Promotional</h1>
+        <h1>{t("packages.business")}</h1>
         <div className="package-card">
-          <h2>Starter</h2>
+          <h2>{t("packages.starter")}</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </div>
         <div className="package-card">
-          <h2>Pro</h2>
+          <h2>{t("packages.pro")}</h2>
           <p>
             Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.
           </p>
         </div>
         <div className="package-card">
-          <h2>Enterprise</h2>
+          <h2>{t("packages.enterprise")}</h2>
           <p>
             Donec sollicitudin molestie malesuada. Nulla quis lorem ut libero.
           </p>
@@ -57,19 +60,19 @@ const Packages = () => {
         data-aos="fade-up"
         data-aos-delay="0"
       >
-        <h1>Other Events</h1>
+        <h1>{t("packages.otherEvents")}</h1>
         <div className="package-card">
-          <h2>Birthday</h2>
+          <h2>{t("packages.birthday")}</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </div>
         <div className="package-card">
-          <h2>Banquet</h2>
+          <h2>{t("packages.banquet")}</h2>
           <p>
             Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.
           </p>
         </div>
         <div className="package-card">
-          <h2>Custom Event</h2>
+          <h2>{t("packages.customEvent")}</h2>
           <p>
             Donec sollicitudin molestie malesuada. Nulla quis lorem ut libero.
           </p>

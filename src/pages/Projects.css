@@ -7,7 +7,7 @@
   color: var(--primary-color);
   animation: fadeIn 1s ease-in 2s forwards;
   opacity: 0;
-  font-family: var(--animation-font);
+  /* font-family: var(--animation-font); */
   font-size: large;
 }
 

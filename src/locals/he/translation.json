@@ -1,0 +1,50 @@
+{
+  "nav": {
+    "home": "בית",
+    "projects": "עבודות",
+    "packages": "חבילות",
+    "about": "עליי",
+    "contact": "צור קשר"
+  },
+  "projects": {
+    "title": "עבודות שלי"
+  },
+  "packages": {
+    "wedding": "חבילות חתונה",
+    "basic": "בסיסי",
+    "premium": "פרימיום",
+    "luxury": "יוקרתי",
+    "business": "קידום עסקי",
+    "starter": "מתחיל",
+    "pro": "מקצועי",
+    "enterprise": "עסקי",
+    "otherEvents": "אירועים אחרים",
+    "birthday": "יום הולדת",
+    "banquet": "סעודה",
+    "customEvent": "אירוע מותאם"
+  },
+  "about": {
+    "about": "עליי"
+  },
+  "contact": {
+    "title": "השאירו הודעה ונחזור אליכם",
+    "name": "שם",
+    "email": "אימייל",
+    "message": "הודעה",
+    "send": "שלח הודעה ◀",
+    "placeholders": {
+      "name": "השם שלך",
+      "email": "האימייל שלך",
+      "message": "איך אפשר לעזור לך?"
+    },
+    "success": "הודעה נשלחה!",
+    "errors": {
+      "fillAll": "אנא מלא את כל השדות",
+      "sendError": "שגיאה בשליחה. נסה ליצור קשר בטלפון"
+    }
+  },
+  "footer": {
+    "contacts": "צור קשר",
+    "rights": "כל הזכויות שמורות"
+  }
+}

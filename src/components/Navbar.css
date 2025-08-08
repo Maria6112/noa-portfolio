@@ -1,4 +1,6 @@
-@import "../styles/variables.css";
+nav {
+  position: sticky;
+}
 
 .navbar {
   background-color: var(--bg-color);
@@ -6,56 +8,53 @@
   top: 0;
   z-index: 1000;
   padding: 15px;
-
   display: flex;
   align-items: center;
-  justify-content: center;
-  justify-content: center;
-  flex-wrap: nowrap;
-  flex-direction: block;
+  justify-content: space-between;
   font-size: 20px;
   color: white;
 }
 
-a {
-  color: var(--primary-color);
-  text-decoration: none;
+/* LTR (английский) */
+.navbar.ltr .navbar-logo {
+  order: -1; /* слева */
 }
 
-/* .logo {
-  font-weight: bold;
-  font-size: 1.8rem;
-  color: white;
-  position: relative;
-  display: inline-block;
-  background-image: linear-gradient(
-    to right,
-    oklch(84.42% 0.19 202.24),
-    white,
-    oklch(84.42% 0.19 202.24)
-  );
-  background-size: 200% auto;
-  background-position: left center;
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  transition: background-position 0.6s ease;
+.navbar.ltr .lang-switch {
+  order: 2; /* справа */
 }
 
-.logo:hover {
-  background-position: right center;
-} */
+/* RTL (иврит) */
+.navbar.rtl .navbar-logo {
+  order: -1; /* справа */
+}
+
+.navbar.rtl .lang-switch {
+  order: 2; /* слева */
+}
+
+.navbar-logo img {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+/* Ссылки по центру на десктопе */
+.navbar-center {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex: 1;
+  order: 1;
+}
 
 .nav-link {
   position: relative;
   padding-bottom: 5px;
-  /* color: var(--primary-color); */
   color: white;
-  /* font-family: var(--secondary-font); */
   text-decoration: none;
   transition: all 0.3s ease;
 }
-
 .nav-link::after {
   content: "";
   position: absolute;
@@ -63,46 +62,18 @@ a {
   bottom: 0;
   width: 0%;
   height: 1px;
-  /* background-color: var(--primary-color); */
   background-color: white;
-  border-radius: 2px;
   transition: width 0.4s ease;
 }
-
-.nav-link:hover::after {
-  width: 100%;
-}
-
-.navbar-center {
-  display: flex;
-  gap: 30px;
-  justify-content: center;
-}
-
-.nav-link:hover {
-  /* color: var(--primary-color); */
-  color: white;
-  font-weight: bold;
-}
-
+.nav-link:hover::after,
 .nav-link.active-link::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 1px;
   width: 100%;
-  /* color: var(--primary-color); */
-  color: white;
-  /* background-color: var(--primary-color); */
-  background-color: white;
-  border-radius: 1px;
-  font-weight: bold;
 }
-a.active-link {
+.nav-link a:hover {
   font-weight: bold;
 }
 
+/* Бургер скрыт на десктопе */
 .burger {
   display: none;
   flex-direction: column;
@@ -111,17 +82,14 @@ a.active-link {
   border: none;
   cursor: pointer;
   padding: 8px;
-  z-index: 1100;
+  /* order: 3; */
 }
-
 .line {
   width: 24px;
   height: 3px;
-  /* background: var(--primary-color); */
   background: white;
   transition: all 0.3s ease;
 }
-
 .line.open:nth-child(1) {
   transform: rotate(45deg) translateY(7px);
 }
@@ -133,36 +101,31 @@ a.active-link {
 }
 
 @media (max-width: 768px) {
+  .navbar {
+    justify-content: space-between;
+    position: sticky;
+  }
+  /* Показываем бургер */
   .burger {
     display: flex;
   }
 
+  /* Ссылки скрыты по умолчанию */
   .navbar-center {
     flex-direction: column;
     position: absolute;
-    top: 60px;
+    top: 79px;
     left: 0;
     right: 0;
     background-color: var(--bg-color);
     max-height: 0;
     overflow: hidden;
     text-align: center;
+    gap: 20px;
+    padding: 0;
   }
-
   .navbar-center.open {
     max-height: 300px;
     padding: 20px 0;
-    background-color: rgba(132, 129, 129, 0.982);
-  }
-
-  .navbar-right {
-    flex-direction: column;
-  }
-  .nav-link:hover::after {
-    width: 100%;
-  }
-  .nav-link.active-link::after {
-    width: 100%;
-    font-weight: bold;
   }
 }

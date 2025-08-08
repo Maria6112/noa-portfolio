@@ -1,13 +1,22 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import "./Home.css";
 
 const Home = () => {
-  const title = "NOA STEFANIAN";
+  const { i18n } = useTranslation();
+
+  const titles = {
+    en: "NOA STEFANIAN",
+    he: "נעה סטפניאן",
+  };
+
+  const currentLang = i18n.language || "he";
+  let title = titles[currentLang] || titles.he;
+
+  // const lettersArray = currentLang === "he" ? [...title].reverse() : [...title];
 
   return (
-    <section id="home">
-      {/* <h1 data-aos="fade-up">TEST ANIMATION</h1> */}
-
+    <section id="home" dir={currentLang === "he" ? "rtl" : "ltr"}>
       <div className="home-container">
         <div className="animation-title">
           <h1 className="animation-title">

@@ -27,7 +27,17 @@
   opacity: 0;
   transform: translateY(40px);
   animation: slideIn 0.5s forwards;
+  /* font-family: var(--animation-font); */
+}
+html.ltr .animation-title,
+html.ltr .animation-title span {
   font-family: var(--animation-font);
+}
+
+html.rtl .animation-title,
+html.rtl .animation-title span {
+  font-family: var(--animation-font-he);
+  font-size: 100px;
 }
 
 @keyframes slideIn {
@@ -46,7 +56,7 @@
 
 @keyframes growLine {
   to {
-    height: 100px; /* итоговая высота полосы */
+    height: 150px; /* итоговая высота полосы */
     background: linear-gradient(to bottom, #000, #aaa);
   }
 }

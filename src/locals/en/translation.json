@@ -1,0 +1,50 @@
+{
+  "nav": {
+    "home": "Home",
+    "projects": "Projects",
+    "packages": "Packages",
+    "about": "About",
+    "contact": "Contact Me"
+  },
+  "projects": {
+    "title": "MY PROJECTS"
+  },
+  "packages": {
+    "wedding": "Wedding Packages",
+    "basic": "Basic",
+    "premium": "Premium",
+    "luxury": "Luxury",
+    "business": "Business Promotional",
+    "starter": "Starter",
+    "pro": "Pro",
+    "enterprise": "Enterprise",
+    "otherEvents": "Other Events",
+    "birthday": "Birthday",
+    "banquet": "Banquet",
+    "customEvent": "Custom Event"
+  },
+  "about": {
+    "about": "About Me"
+  },
+  "contact": {
+    "title": "Leave your message and we'll get back to you",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "send": "Send Message ➤",
+    "placeholders": {
+      "name": "Your name",
+      "email": "Your email",
+      "message": "How can I help you?"
+    },
+    "success": "Message sent!",
+    "errors": {
+      "fillAll": "Please fill out all fields",
+      "sendError": "Error in sending. Try to contact by phone"
+    }
+  },
+  "footer": {
+    "contacts": "Contacts",
+    "rights": "All rights reserved"
+  }
+}

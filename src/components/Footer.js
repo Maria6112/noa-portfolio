@@ -1,11 +1,14 @@
 import "./Footer.css";
 import { FaEnvelope, FaWhatsapp, FaTelegramPlane } from "react-icons/fa";
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
+  const { t } = useTranslation();
+
   return (
     <footer>
       <div className="site-footer">
-        <h4>Contacts</h4>
+        <h4>{t("footer.contacts")}</h4>
         <div className="social-icons">
           <a
             href="https://wa.me/972515330681"
@@ -33,7 +36,7 @@ const Footer = () => {
       </div>
 
       <div className="footer-bottom">
-        <p>© 2025 Noa Stefanian. All rights reserved</p>
+        <p>© 2025 Noa Stefanian. {t("footer.rights")}</p>
         <p>Built with React by Maria Fomin</p>
       </div>
     </footer>

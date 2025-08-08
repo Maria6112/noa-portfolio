@@ -1,15 +1,27 @@
-@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Gruppo&family=Libertinus+Sans:ital,wght@0,400;0,700;1,400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Gruppo&family=Libertinus+Sans:ital,wght@0,400;0,700;1,400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&family=Gruppo&family=Libertinus+Sans:ital,wght@0,400;0,700;1,400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&family=Bellefair&family=Gruppo&family=Libertinus+Sans:ital,wght@0,400;0,700;1,400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&family=Bellefair&family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Gruppo&family=Libertinus+Sans:ital,wght@0,400;0,700;1,400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"); */
+
+/* импорт шрифтов разом, только нужных */
+@import url("https://fonts.googleapis.com/css2?family=Bona+Nova+SC&family=Bellefair&family=Gruppo&family=Libertinus+Sans:ital,wght@0,400;0,700&display=swap");
 
 :root {
   --primary-color: rgb(75, 70, 70);
   --secondary-color: rgb(198, 193, 193);
-  /* --bg-color: rgba(177, 152, 136, 0.199); */
+
   --bg-color: rgba(14, 14, 14, 0.509);
   --secondary-bg-color: rgba(97, 94, 94, 0.509);
-  /* --main-font: "Poppins", sans-serif; */
-  --main-font: "Gruppo", sans-serif;
+
+  --main-font: "Bona Nova SC", serif; /* для английского */
+  --he-font: "Bellefair", serif; /* для иврита */
+
   --secondary-font: "Poppins", sans-serif;
-  --animation-font: "Cormorant Garamond", serif;
+  /* --animation-font: "Cormorant Garamond", serif; */
+  --animation-font: "Libertinus Sans", sans-serif;
+
+  --animation-font-he: "Bellefair", serif;
+  /* --animation-font-he: "Libertinus Sans", sans-serif; */
 }

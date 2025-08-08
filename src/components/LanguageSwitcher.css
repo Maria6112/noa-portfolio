@@ -1,0 +1,61 @@
+.lang-switch {
+  position: relative;
+  display: flex;
+  gap: 15px;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Кнопки языков — без рамок, белые буквы */
+.lang-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0 5px;
+  position: relative;
+  outline: none;
+}
+.arrow {
+  font-size: 12px;
+  transition: transform 0.3s ease;
+  user-select: none;
+}
+
+/* Поворачиваем стрелку вверх, если меню открыто */
+.arrow.open {
+  transform: rotate(180deg);
+}
+
+.lang-btn:hover {
+  color: #ddd;
+}
+
+/* Выпадающее меню */
+.lang-dropdown {
+  position: absolute;
+  top: 45px;
+  background: var(--bg-color);
+  margin-top: 5px;
+  border-radius: 4px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  z-index: 10;
+  min-width: 50px;
+}
+
+.lang-option {
+  padding: 8px 12px;
+  color: white;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.3s ease;
+}
+
+.lang-option:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
