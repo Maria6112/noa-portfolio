@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import VideoModal from "./VideoModal";
 import "./VideoGallery.css";
 
@@ -99,8 +99,14 @@ const videoSources = [
   },
 ];
 
-const VideoGallery = ({ lang = "en" }) => {
+const VideoGallery = () => {
   const [selectedVideo, setSelectedVideo] = useState(null);
+  const [lang, setLang] = useState("en");
+  useEffect(() => {
+    // Получаем язык из html атрибута lang
+    const htmlLang = document.documentElement.lang || "en";
+    setLang(htmlLang);
+  }, []);
 
   return (
     <div className="video-gallery ">
