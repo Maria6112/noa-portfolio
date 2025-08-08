@@ -90,6 +90,15 @@ nav {
   background: white;
   transition: all 0.3s ease;
 }
+.burger .line:nth-child(1) {
+  width: 24px; /* первая — как есть */
+}
+.burger .line:nth-child(2) {
+  width: 14px; /* вторая — короче */
+}
+.burger .line:nth-child(3) {
+  width: 18px; /* третья — длинее второй, но короче первой */
+}
 .line.open:nth-child(1) {
   transform: rotate(45deg) translateY(7px);
 }
