@@ -37,13 +37,16 @@ const LanguageSwitcher = () => {
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
+  const languageNames = {
+    he: "עברית",
+    en: "English",
+  };
 
-  // Текст кнопки текущего языка
-  const langLabel = currentLang === "he" ? "עב" : "EN";
+  const langLabel = languageNames[currentLang] || "ENGLISH";
 
   // Языки для выбора (кроме текущего)
   const otherLang = currentLang === "he" ? "en" : "he";
-  const otherLabel = otherLang === "he" ? "עב" : "EN";
+  const otherLabel = languageNames[otherLang];
 
   return (
     <div className="lang-switch" ref={switcherRef}>
