@@ -118,6 +118,7 @@ nav {
     left: 0;
     right: 0;
     background-color: var(--bg-color);
+    /* background-color: rgb(192, 184, 179); */
     max-height: 0;
     overflow: hidden;
     text-align: center;
@@ -127,5 +128,25 @@ nav {
   .navbar-center.open {
     max-height: 300px;
     padding: 20px 0;
+  }
+  .navbar.ltr .navbar-logo {
+    order: 2;
+  }
+
+  .navbar.ltr .lang-switch {
+    order: 2;
+  }
+  .navbar.ltr .burger {
+    order: 1;
+  }
+  .navbar.rtl .navbar-logo {
+    order: 1;
+  }
+
+  .navbar.rtl .lang-switch {
+    order: 2;
+  }
+  .navbar.rtl .burger {
+    order: 0;
   }
 }
