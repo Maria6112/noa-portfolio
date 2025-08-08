@@ -1,5 +1,10 @@
 import "./Footer.css";
-import { FaEnvelope, FaWhatsapp, FaTelegramPlane } from "react-icons/fa";
+import {
+  FaEnvelope,
+  FaWhatsapp,
+  FaTelegramPlane,
+  FaPhone,
+} from "react-icons/fa";
 import { useTranslation } from "react-i18next";
 
 const Footer = () => {
@@ -32,11 +37,16 @@ const Footer = () => {
             </a>
           </div>
         </div>
-        <span className="phone-number">+972-51-5330681</span>
+        <span className="phone-number">
+          <a href="tel:+972515330681" className="phone-link">
+            <FaPhone style={{ margin: "6px" }} />
+            972-51-5330681
+          </a>
+        </span>
       </div>
 
       <div className="footer-bottom">
-        <p>© 2025 Noa Stefanian. {t("footer.rights")}</p>
+        <p>© {t("footer.rights")}</p>
         <p>Built with React by Maria Fomin</p>
       </div>
     </footer>

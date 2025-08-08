@@ -68,3 +68,9 @@ footer {
 .footer-bottom p {
   margin: 4px 0;
 }
+.phone-link {
+  color: inherit;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+}
