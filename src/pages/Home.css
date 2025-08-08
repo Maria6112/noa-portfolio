@@ -62,8 +62,12 @@ html.rtl .animation-title span {
 }
 
 @media (max-width: 768px) {
+  html.ltr .animation-title span {
+    font-size: 50px;
+    white-space: nowrap;
+  }
   html.rtl .animation-title span {
-    font-size: 42px;
+    font-size: 70px;
     white-space: nowrap;
   }
 }
