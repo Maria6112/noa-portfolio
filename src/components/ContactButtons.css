@@ -1,6 +1,6 @@
 .contact-buttons {
   position: fixed;
-  top: 50%; /* по центру экрана */
+  bottom: 20px;
   right: 20px; /* прижато к правому краю */
   transform: translateY(-50%); /* выравнивание по центру */
   display: flex;
@@ -54,15 +54,9 @@
 
 /* Мобильная адаптация */
 @media (max-width: 600px) {
-  .contact-buttons {
-    bottom: 20px;
-    right: 20px;
-    gap: 12px;
-  }
-
   .contact-btn {
     font-size: 14px;
-    padding: 8px 12px;
+    /* padding: 8px 12px; */
   }
 
   .contact-btn svg {

@@ -1,12 +1,8 @@
 import React from "react";
 import { FaWhatsapp, FaTelegramPlane } from "react-icons/fa";
-import { useTranslation } from "react-i18next";
-
 import "./ContactButtons.css";
 
 const ContactButtons = () => {
-  const { t } = useTranslation();
-
   return (
     <div className="contact-buttons">
       <a
