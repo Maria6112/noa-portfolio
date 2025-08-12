@@ -9,19 +9,13 @@ const AboutMe = () => {
 
   return (
     <div className="about">
-      <div className={`about-me-container ${isHebrew ? "he" : "en"}`}>
-        <div
-          className="about-me-text"
-          data-aos={isHebrew ? "fade-left" : "fade-right"}
-        >
+      <div className="about-me-container">
+        <div className="about-me-text" data-aos="fade-left">
           <h2>{t("about.title")}</h2>
           <p> {t("about.text1")}</p>
           <p> {t("about.text2")}</p>
         </div>
-        <div
-          className="about-me-photo"
-          data-aos={isHebrew ? "fade-right" : "fade-left"}
-        >
+        <div className="about-me-photo" data-aos="fade-right">
           <img src="/images/neom.jpg" alt="About me" />
         </div>
       </div>

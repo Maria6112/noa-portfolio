@@ -27,13 +27,6 @@
   font-family: var(--animation-font);
 }
 
-.animation-title {
-  color: var(--primary-color);
-  font-size: 64px;
-  font-weight: bold;
-  font-family: var(--animation-font);
-  white-space: nowrap; /* запретить переносы */
-}
 .animation-title .word {
   display: inline-block;
   opacity: 0;
@@ -83,10 +76,16 @@ html.rtl .animation-title span {
 @media (max-width: 768px) {
   html.ltr .animation-title span {
     font-size: 35px;
-    white-space: nowrap;
+    white-space: normal; /* изменили с nowrap */
+    word-break: break-word; /* чтобы можно было переносить слова */
   }
   html.rtl .animation-title span {
-    font-size: 70px;
-    white-space: nowrap;
+    font-size: 40px; /* чуть меньше чем 50 */
+    white-space: normal; /* изменили с nowrap */
+    word-break: break-word;
+  }
+
+  .animation-title {
+    white-space: normal; /* разрешаем перенос */
   }
 }
