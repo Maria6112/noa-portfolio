@@ -12,11 +12,13 @@ const Home = () => {
 
   const currentLang = i18n.language || "he";
   let title = titles[currentLang] || titles.he;
+  const totalWords = title.split(" ").length;
+  const lineAnimationDelay = (totalWords - 1) * 0.4 + 0.6;
 
   return (
     <section id="home" dir={currentLang === "he" ? "rtl" : "ltr"}>
       <div className="home-container">
-        <div className="animation-title">
+        <div className="animation-wrapper">
           <h1 className="animation-title">
             {/* {title.split("").map((letter, i) => (
               <span key={i} style={{ animationDelay: `${i * 0.1}s` }}>
@@ -32,8 +34,12 @@ const Home = () => {
               </span>
             ))}
           </h1>
-          <div className="vertical-line"></div>
         </div>
+
+        <div
+          className="vertical-line"
+          style={{ animationDelay: `${lineAnimationDelay}s` }}
+        ></div>
       </div>
     </section>
   );
