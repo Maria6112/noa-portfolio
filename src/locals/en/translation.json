@@ -24,7 +24,10 @@
     "customEvent": "Custom Event"
   },
   "about": {
-    "about": "About Me"
+    "about": "About Me",
+    "title": "My story",
+    "text1": "I have over 10 years of experience in the industry. I love turning videos into unforgettable moments. My passion is to capture emotions and tell stories through the lens.",
+    "text2": " Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia veritatis a ex reprehenderit fuga ad optio atque, est ipsam molestiae itaque ratione voluptates voluptatibus iure veniam distinctio architecto culpa blanditiis."
   },
   "contact": {
     "title": "Leave your message and we'll get back to you",
@@ -42,6 +45,9 @@
       "fillAll": "Please fill out all fields",
       "sendError": "Error in sending. Try to contact by phone"
     }
+  },
+  "contactButton": {
+    "text": "Contact me"
   },
   "footer": {
     "contacts": "Contacts",

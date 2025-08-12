@@ -5,7 +5,9 @@
   --secondary-color: rgb(198, 193, 193);
 
   --bg-color: rgba(14, 14, 14, 0.509);
+  /* --bg-color: rgba(65, 46, 26, 0.509); */
   --secondary-bg-color: rgba(97, 94, 94, 0.509);
+  --third-bg-color: #f8f3ee;
 
   --main-font: "Bona Nova SC", serif; /* для английского */
   --he-font: "Bellefair", serif; /* для иврита */

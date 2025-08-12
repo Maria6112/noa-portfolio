@@ -2,7 +2,7 @@
 
 .projects-container {
   padding: 20px;
-  background-color: #f9f9f9; /* можешь поменять */
+  background-color: var(--third-bg-color);
   text-align: center;
   color: var(--primary-color);
   animation: fadeIn 1s ease-in 2s forwards;

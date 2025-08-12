@@ -7,9 +7,10 @@ import Home from "./pages/Home";
 import Projects from "./pages/Projects";
 import Packages from "./pages/Packаges";
 import Footer from "./components/Footer";
-import ScrollToTopButton from "./components/ScrollToTop";
+import ContactButtons from "./components/ContactButtons";
 import ContactForm from "./pages/ContactMe";
 import AOS from "aos";
+import AboutMe from "./pages/About";
 
 function App() {
   useEffect(() => {
@@ -33,12 +34,12 @@ function App() {
       </section>
 
       <section id="about">
-        <h1>About Me</h1>
+        <AboutMe />
       </section>
       <section id="contact">
         <ContactForm />
       </section>
-      <ScrollToTopButton />
+      <ContactButtons />
       <Footer />
     </div>
   );

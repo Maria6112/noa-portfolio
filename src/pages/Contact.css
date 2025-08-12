@@ -7,6 +7,7 @@
   font-family: Poppins, sans-serif;
   backdrop-filter: blur(4px);
   border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
 .contact-form h2 {
@@ -67,11 +68,16 @@
   /* background: var(--bg-color); */
   background: var(--bg-color);
   border: none;
-  border-radius: 0 0 20px 0;
+  /* border-radius: 0 0 20px 0; */
   cursor: pointer;
   transition: background 0.3s ease;
 }
-
+html.ltr .contact-form button {
+  border-radius: 0 0 20px 0;
+}
+html.rtl .contact-form button {
+  border-radius: 0 0 0 20px;
+}
 .contact-form button:hover {
   background: var(--secondary-bg-color);
   /* background: var(--secondary-bg-color); */
@@ -114,50 +120,6 @@
     opacity: 1;
     transform: translateY(0);
   }
-}
-.letter span {
-  font-weight: bold;
-  font-size: 1.8rem;
-  /* color: white; */
-  position: relative;
-  display: inline-block;
-  background-size: 200% auto;
-  background-position: left center;
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  transition: background-position 0.6s ease;
-}
-:root.light .contact-form {
-  background: rgba(255, 255, 255, 0.85);
-  color: #111;
-  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
-}
-
-:root.light .contact-form label,
-:root.light .contact-form input,
-:root.light .contact-form textarea {
-  color: #111;
-  border-bottom: 1px solid #333;
-}
-
-:root.light .contact-form input::placeholder,
-:root.light .contact-form textarea::placeholder {
-  color: #666;
-}
-
-:root.light .contact-form input:focus,
-:root.light .contact-form textarea:focus {
-  border-bottom: 1px solid oklch(84.42% 0.19 202.24);
-}
-
-:root.light .contact-form button {
-  color: black;
-  background: oklch(84.42% 0.19 202.24);
-}
-
-:root.light .form-status {
-  color: oklch(84.42% 0.19 202.24);
 }
 
 @keyframes slideUpFade {
