@@ -14,7 +14,7 @@ import AboutMe from "./pages/About";
 
 function App() {
   useEffect(() => {
-    AOS.init({ duration: 800 });
+    AOS.init({ duration: 1000, once: true });
   }, []);
 
   return (

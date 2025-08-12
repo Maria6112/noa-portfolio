@@ -28,7 +28,7 @@ const Home = () => {
               <span
                 key={i}
                 className="word"
-                style={{ animationDelay: `${i * 0.4}s` }}
+                style={{ animationDelay: `${i * 0.3}s` }}
               >
                 {word}
               </span>

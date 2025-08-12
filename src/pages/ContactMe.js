@@ -36,7 +36,13 @@ const ContactForm = () => {
   };
 
   return (
-    <form className="contact-form" onSubmit={handleSubmit}>
+    <form
+      className="contact-form"
+      onSubmit={handleSubmit}
+      // data-aos="fade-up"
+      data-aos="zoom-in"
+      data-aos-delay="100"
+    >
       <h2 className="fade-in-title">{t("contact.title")}</h2>
       {/* <h2 className="animated-title">
         {"Leave your message and we'll get back to you"
