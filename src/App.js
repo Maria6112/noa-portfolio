@@ -39,7 +39,7 @@ function App() {
       <section id="contact">
         <ContactForm />
       </section>
-      {/* <ContactButtons /> */}
+      <ContactButtons />
       <Footer />
     </div>
   );
