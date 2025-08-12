@@ -18,7 +18,7 @@ function App() {
   }, []);
 
   return (
-    <div>
+    <div className="app-container">
       <Navbar />
 
       <section id="home">
@@ -39,7 +39,7 @@ function App() {
       <section id="contact">
         <ContactForm />
       </section>
-      <ContactButtons />
+      {/* <ContactButtons /> */}
       <Footer />
     </div>
   );
