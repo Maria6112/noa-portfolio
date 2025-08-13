@@ -10,8 +10,9 @@
 .lang-btn {
   background: none;
   border: none;
-  color: white;
-  font-size: 18px;
+  /* color: white; */
+  color: var(--primary-color);
+  font-size: 25px;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -19,7 +20,15 @@
   padding: 0 5px;
   position: relative;
   outline: none;
+  font-family: var(--he-font);
 }
+/* .lang-btn.ltr button {
+  font-family: var(--main-font);
+}
+.lang-btn.rtl button {
+  font-family: var(--he-font);
+} */
+
 .arrow {
   font-size: 12px;
   transition: transform 0.3s ease;
@@ -32,7 +41,7 @@
 }
 
 .lang-btn:hover {
-  color: #ddd;
+  transform: scale(1.05);
 }
 
 /* Выпадающее меню */
@@ -49,11 +58,18 @@
 }
 
 .lang-option {
-  padding: 8px 12px;
-  color: white;
+  margin-left: 10px;
+  padding: 10px;
+  /* color: white; */
+  color: var(--primary-color);
+
   cursor: pointer;
   white-space: nowrap;
   transition: background 0.3s ease;
+}
+
+.navbar.rtl .lang-option:contains("English") {
+  font-size: 14px important!;
 }
 
 .lang-option:hover {

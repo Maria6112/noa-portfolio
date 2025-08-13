@@ -5,7 +5,7 @@ import "./VideoGallery.css";
 const translations = {
   en: {
     videos: [
-      { title: "Dvir & Noa" },
+      { title: "N | D" },
       { title: "Wedding Highlights" },
       { title: "Beach Memories" },
       { title: "Beach Memories" },
@@ -38,7 +38,7 @@ const videoSources = [
     id: "1",
     videoUrl:
       "https://www.dropbox.com/scl/fi/h7z88h2zrgz203bsergm2/N-D.mp4?rlkey=mwpb8p3pi9l4711x8hoxfvdfp&raw=1",
-    thumbnail: "/images/dvir&noa.png",
+    // thumbnail: "/images/dvir&noa.png",
     // title: "Dvir & Noa",
   },
   {
@@ -69,34 +69,34 @@ const videoSources = [
     thumbnail: "/images/dvir&noa.png",
     // title: "Dvir & Noa",
   },
-  {
-    id: "6",
-    videoUrl:
-      "https://www.dropbox.com/scl/fi/h7z88h2zrgz203bsergm2/N-D.mp4?rlkey=mwpb8p3pi9l4711x8hoxfvdfp&raw=1",
-    thumbnail: "/images/dvir&noa.png",
-    // title: "Dvir & Noa",
-  },
-  {
-    id: "7",
-    videoUrl:
-      "https://www.dropbox.com/scl/fi/h7z88h2zrgz203bsergm2/N-D.mp4?rlkey=mwpb8p3pi9l4711x8hoxfvdfp&raw=1",
-    thumbnail: "/images/dvir&noa.png",
-    // title: "Dvir & Noa",
-  },
-  {
-    id: "8",
-    videoUrl:
-      "https://www.dropbox.com/scl/fi/h7z88h2zrgz203bsergm2/N-D.mp4?rlkey=mwpb8p3pi9l4711x8hoxfvdfp&raw=1",
-    thumbnail: "/images/dvir&noa.png",
-    // title: "Dvir & Noa",
-  },
-  {
-    id: "9",
-    videoUrl:
-      "https://www.dropbox.com/scl/fi/h7z88h2zrgz203bsergm2/N-D.mp4?rlkey=mwpb8p3pi9l4711x8hoxfvdfp&raw=1",
-    thumbnail: "/images/dvir&noa.png",
-    // title: "Dvir & Noa",
-  },
+  // {
+  //   id: "6",
+  //   videoUrl:
+  //     "https://www.dropbox.com/scl/fi/h7z88h2zrgz203bsergm2/N-D.mp4?rlkey=mwpb8p3pi9l4711x8hoxfvdfp&raw=1",
+  //   thumbnail: "/images/dvir&noa.png",
+  //   // title: "Dvir & Noa",
+  // },
+  // {
+  //   id: "7",
+  //   videoUrl:
+  //     "https://www.dropbox.com/scl/fi/h7z88h2zrgz203bsergm2/N-D.mp4?rlkey=mwpb8p3pi9l4711x8hoxfvdfp&raw=1",
+  //   thumbnail: "/images/dvir&noa.png",
+  //   // title: "Dvir & Noa",
+  // },
+  // {
+  //   id: "8",
+  //   videoUrl:
+  //     "https://www.dropbox.com/scl/fi/h7z88h2zrgz203bsergm2/N-D.mp4?rlkey=mwpb8p3pi9l4711x8hoxfvdfp&raw=1",
+  //   thumbnail: "/images/dvir&noa.png",
+  //   // title: "Dvir & Noa",
+  // },
+  // {
+  //   id: "9",
+  //   videoUrl:
+  //     "https://www.dropbox.com/scl/fi/h7z88h2zrgz203bsergm2/N-D.mp4?rlkey=mwpb8p3pi9l4711x8hoxfvdfp&raw=1",
+  //   thumbnail: "/images/dvir&noa.png",
+  //   // title: "Dvir & Noa",
+  // },
 ];
 
 const VideoGallery = () => {

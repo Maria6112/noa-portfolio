@@ -1,7 +1,7 @@
 .contact-buttons {
   position: fixed;
-  bottom: 20px;
-  right: 20px; /* прижато к правому краю */
+  bottom: 0%;
+
   transform: translateY(-50%); /* выравнивание по центру */
   display: flex;
   flex-direction: column;
@@ -11,6 +11,12 @@
   border-radius: 12px;
   /* box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); */
   z-index: 999;
+}
+html.ltr .contact-buttons {
+  right: 5px;
+}
+html.rtl .contact-buttons {
+  left: 5px;
 }
 
 .contact-buttons-title {
@@ -40,16 +46,6 @@
   transform: translateY(-2px) scale(1.05);
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
   opacity: 0.95;
-}
-
-/* WhatsApp */
-.whatsapp {
-  /* background-color: #25d366; */
-}
-
-/* Telegram */
-.telegram {
-  /* background-color: #0088cc; */
 }
 
 /* Мобильная адаптация */

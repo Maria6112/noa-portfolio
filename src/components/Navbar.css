@@ -11,8 +11,17 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  /* color: white; */
+}
+/* LTR (английский) */
+.navbar.ltr {
   font-size: 20px;
-  color: white;
+}
+
+.navbar.rtl {
+  font-size: 30px;
+  /* font-size: 15px; */
 }
 
 /* LTR (английский) */
@@ -51,9 +60,13 @@ nav {
 .nav-link {
   position: relative;
   padding-bottom: 5px;
-  color: white;
+  /* color: white; */
+  color: var(--primary-color);
   text-decoration: none;
   transition: all 0.3s ease;
+}
+.nav-link.ltr a {
+  font-family: var(--he-font);
 }
 .nav-link::after {
   content: "";
@@ -62,7 +75,8 @@ nav {
   bottom: 0;
   width: 0%;
   height: 1px;
-  background-color: white;
+  /* background-color: white; */
+  background-color: var(--primary-color);
   transition: width 0.4s ease;
 }
 .nav-link:hover::after,
@@ -87,7 +101,8 @@ nav {
 .line {
   width: 24px;
   height: 3px;
-  background: white;
+  /* background: white; */
+  background: var(--primary-color);
   transition: all 0.3s ease;
 }
 .burger .line:nth-child(1) {
@@ -126,8 +141,8 @@ nav {
     top: 79px;
     left: 0;
     right: 0;
-    background-color: var(--bg-color);
-    /* background-color: rgb(192, 184, 179); */
+    /* background-color: var(--bg-color); */
+    background-color: #f8f3ee;
     max-height: 0;
     overflow: hidden;
     text-align: center;

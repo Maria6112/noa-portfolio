@@ -1,6 +1,7 @@
 footer {
   background-color: var(--bg-color);
-  color: white;
+  /* color: white; */
+  color: var(--primary-color);
   padding: 40px 20px 20px;
   text-align: center;
   font-family: var(--main-font);
@@ -17,11 +18,13 @@ footer {
 .footer-column h4 {
   margin-bottom: 10px;
   font-size: 18px;
-  color: white;
+  /* color: white; */
+  color: var(--primary-color);
 }
 
 .email-link {
-  color: white;
+  /* color: white; */
+  color: var(--primary-color);
   text-decoration: none;
   font-size: 20px;
   display: inline-flex;
@@ -37,7 +40,9 @@ footer {
 
 .icon-btn-whatsapp,
 .icon-btn-telegram {
-  color: white;
+  /* color: white; */
+  color: var(--primary-color);
+
   text-decoration: none;
   transition: transform 0.3s ease;
   margin: 5px;
@@ -55,14 +60,16 @@ footer {
 
 .phone-number {
   font-size: 20px;
-  color: white;
+  /* color: white; */
+  color: var(--primary-color);
 }
 
 .footer-bottom {
-  border-top: 1px solid white;
+  border-top: 1px solid var(--primary-color);
   padding-top: 16px;
   font-size: 16px;
-  color: white;
+  /* color: white; */
+  color: var(--primary-color);
 }
 
 .footer-bottom p {

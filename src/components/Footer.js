@@ -32,8 +32,8 @@ const Footer = () => {
             <FaTelegramPlane size={25} />
           </a>
           <div className="social-icons">
-            <a href="mailto: stefanikim2@gmail.com" className="email-link">
-              <FaEnvelope className="email-icon" /> yourEmail@gmail.com
+            <a href="mailto: noaliba10@gmail.com" className="email-link">
+              <FaEnvelope className="email-icon" /> noaliba10@gmail.com
             </a>
           </div>
         </div>

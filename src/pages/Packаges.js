@@ -27,7 +27,7 @@ const Packages = () => {
         </div>
       </section>
 
-      <section className="package-section" data-aos="fade-up">
+      {/* <section className="package-section" data-aos="fade-up">
         <h1>{t("packages.business")}</h1>
         <div className="package-card" data-aos="zoom-in" data-aos-delay="100">
           <h2>{t("packages.starter")}</h2>
@@ -65,7 +65,7 @@ const Packages = () => {
             Donec sollicitudin molestie malesuada. Nulla quis lorem ut libero.
           </p>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 };
