@@ -1,12 +1,15 @@
 footer {
   background-color: var(--bg-color);
-  /* color: white; */
   color: var(--primary-color);
-  padding: 40px 20px 20px;
+  padding: 20px 20px 20px;
   text-align: center;
-  font-family: var(--main-font);
+  /* font-family: var(--main-font); */
+  font-family: var(--he-font);
 }
 
+h4 {
+  font-weight: 500;
+}
 .site-footer {
   display: flex;
   flex-direction: column;
@@ -23,7 +26,6 @@ footer {
 }
 
 .email-link {
-  /* color: white; */
   color: var(--primary-color);
   text-decoration: none;
   font-size: 20px;
@@ -74,7 +76,7 @@ footer {
 
 .footer-bottom p {
   margin: 4px 0;
-  font-family: var(--secondary-font);
+  font-family: var(--he-font);
 }
 .phone-link {
   color: inherit;

@@ -1,12 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Bona+Nova+SC&family=Bellefair&family=Gruppo&family=Libertinus+Sans:ital,wght@0,400;0,700&display=swap");
 
 :root {
-  --primary-color: rgb(75, 70, 70);
+  --primary-color: rgb(74, 54, 54);
   --secondary-color: rgb(198, 193, 193);
-
   /* --bg-color: rgba(14, 14, 14, 0.509); */
   /* --bg-color: rgba(147, 145, 144, 0.509); */
-  --bg-color: #f8f3eed7;
+  /* --bg-color: #f8f3eed7; */
+  --bg-color: rgba(206, 190, 136, 0.27);
+  --bg-color-solid: rgb(249, 244, 229);
   --secondary-bg-color: rgba(97, 94, 94, 0.509);
   --third-bg-color: #f8f3ee;
 
@@ -16,6 +17,7 @@
   --secondary-font: "Poppins", sans-serif;
   /* --animation-font: "Cormorant Garamond", serif; */
   --animation-font: "Libertinus Sans", sans-serif;
+  /* --animation-font: "Bellefair", serif; */
 
   --animation-font-he: "Bellefair", serif;
   /* --animation-font-he: "Libertinus Sans", sans-serif; */

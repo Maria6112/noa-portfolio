@@ -39,24 +39,10 @@ const ContactForm = () => {
     <form
       className="contact-form"
       onSubmit={handleSubmit}
-      // data-aos="fade-up"
       data-aos="zoom-in"
       data-aos-delay="100"
     >
       <h2 className="fade-in-title">{t("contact.title")}</h2>
-      {/* <h2 className="animated-title">
-        {"Leave your message and we'll get back to you"
-          .split(" ")
-          .map((word, i) => (
-            <span
-              key={i}
-              className="word"
-              style={{ animationDelay: `${i * 0.2}s` }}
-            >
-              {word}&nbsp;
-            </span>
-          ))}
-      </h2> */}
       <label>{t("contact.name")}</label>
       <input
         type="text"

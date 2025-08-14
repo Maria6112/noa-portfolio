@@ -4,8 +4,7 @@ import "./About.css";
 import { useTranslation } from "react-i18next";
 
 const AboutMe = () => {
-  const { t, i18n } = useTranslation();
-  const isHebrew = i18n.language || "he";
+  const { t } = useTranslation();
 
   return (
     <div className="about">

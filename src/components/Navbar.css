@@ -19,9 +19,8 @@ nav {
   font-size: 20px;
 }
 
-.navbar.rtl {
-  font-size: 30px;
-  /* font-size: 15px; */
+.navbar.rtl .nav-link {
+  font-size: 25px;
 }
 
 /* LTR (английский) */
@@ -79,12 +78,13 @@ nav {
   background-color: var(--primary-color);
   transition: width 0.4s ease;
 }
+html.rtl .nav-link::after {
+  left: auto;
+  right: 0;
+}
 .nav-link:hover::after,
 .nav-link.active-link::after {
   width: 100%;
-}
-.nav-link a:hover {
-  font-weight: bold;
 }
 
 /* Бургер скрыт на десктопе */
@@ -141,8 +141,7 @@ nav {
     top: 79px;
     left: 0;
     right: 0;
-    /* background-color: var(--bg-color); */
-    background-color: #f8f3ee;
+    background-color: var(--bg-color-solid);
     max-height: 0;
     overflow: hidden;
     text-align: center;

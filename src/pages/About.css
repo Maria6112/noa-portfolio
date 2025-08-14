@@ -1,7 +1,7 @@
 @import "../styles/variables.css";
 
 .about {
-  background-color: var(--third-bg-color);
+  background-color: var(--bg-color);
 }
 .about-me-container {
   display: flex;

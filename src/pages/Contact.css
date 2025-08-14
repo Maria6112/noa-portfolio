@@ -4,8 +4,7 @@
   margin: 40px auto;
   padding: 40px 20px;
   color: var(--primary-color);
-  font-family: Poppins, sans-serif;
-  backdrop-filter: blur(4px);
+  font-family: var(--he-font);
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
@@ -13,7 +12,9 @@
 .contact-form h2 {
   margin-bottom: 30px;
   font-size: 30px;
-  /* text-align: center; */
+  font-weight: 500;
+
+  text-align: center;
   color: var(--primary-color);
   text-shadow: 1px 1px 2px var(--primary-color);
 }
@@ -41,6 +42,7 @@
 .contact-form input::placeholder,
 .contact-form textarea::placeholder {
   color: #777;
+  font-family: var(--he-font);
 }
 
 .contact-form input:focus,
@@ -57,32 +59,101 @@
 }
 .contact-form textarea {
   resize: none;
+  font-family: var(--he-font);
+  font-size: 20px;
 }
 
-.contact-form button {
+/* .contact-form button {
   font-family: "Poppins", sans-serif;
   margin-top: 30px;
   padding: 12px 24px;
   font-size: 1rem;
-  /* color: white; */
   color: var(--primary-color);
-
-  /* background: var(--bg-color); */
   background: var(--bg-color);
+  background-color: var(--bg-color);
   border: none;
-  /* border-radius: 0 0 20px 0; */
   cursor: pointer;
   transition: background 0.3s ease;
+} */
+
+.contact-form button {
+  font-family: var(--he-font);
+  position: relative;
+  display: inline-block;
+  font-size: 20px;
+  padding: 12px 24px;
+  background: var(--bg-color);
+  color: var(--primary-color);
+  font-weight: 500;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+  overflow: hidden;
 }
+
+.contact-form button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -150%;
+  width: 150%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent 30%,
+    #ece5d48c 45%,
+    #f0eee98c 55%,
+    transparent 70%
+  );
+  animation: goldShine 2s linear infinite;
+}
+
+@keyframes goldShine {
+  0% {
+    left: -150%;
+  }
+  100% {
+    left: 150%;
+  }
+}
+
+.contact-form button:hover {
+  transform: scale(1.05);
+}
+
+html.rtl .contact-form button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 150%;
+  width: 150%;
+  height: 100%;
+  background: linear-gradient(
+    240deg,
+    /* угол сверху справа → вниз налево */ transparent 30%,
+    #f9f7f08c 45%,
+    #e2dabe8c 55%,
+    transparent 70%
+  );
+  animation: goldShineRTL 2.5s linear infinite;
+}
+
+@keyframes goldShineRTL {
+  0% {
+    left: 150%;
+  }
+  100% {
+    left: -150%;
+  }
+}
+
 html.ltr .contact-form button {
   border-radius: 0 0 20px 0;
 }
 html.rtl .contact-form button {
   border-radius: 0 0 0 20px;
-}
-.contact-form button:hover {
-  background: var(--secondary-bg-color);
-  /* background: var(--secondary-bg-color); */
 }
 
 .form-status {

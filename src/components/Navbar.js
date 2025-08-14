@@ -1,10 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import "./Navbar.css";
 import { useTranslation } from "react-i18next";
-
-// import { useState } from "react";
 import LanguageSwitcher from "./LanguageSwitcher";
-// import { NavLink, Link } from "react-router-dom";
 // import logo from '../images/logo.JPG';
 
 const Navbar = () => {
@@ -13,15 +10,8 @@ const Navbar = () => {
   const [active, setActive] = useState(window.location.hash || "#home");
   const observerRef = useRef(null);
 
-  // useEffect(() => {
-  //   const handleHashChange = () => {
-  //     setActive(window.location.hash || "#home");
-  //   };
-  //   window.addEventListener("hashchange", handleHashChange);
-  //   handleHashChange();
-
-  //   return () => window.removeEventListener("hashchange", handleHashChange);
-  // }, []);
+  const burgerRef = useRef(null);
+  const menuRef = useRef(null);
 
   const navItems = [
     { href: "#home", label: t("nav.home") },
@@ -99,13 +89,35 @@ const Navbar = () => {
     return () => {
       if (observerRef.current) observerRef.current.disconnect();
     };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [t]); // зависимость t чтобы при смене языка пересобрать список секций (если id меняться не будут — ok)
 
-  // useEffect(() => {
-  //   document.documentElement.lang = i18n.language;
-  //   document.documentElement.dir = i18n.language === "he" ? "rtl" : "ltr";
-  // }, [i18n.language]);
+  useEffect(() => {
+    if (!menuOpen) return;
+
+    const handleOutside = (e) => {
+      const menuEl = menuRef.current;
+      const burgerEl = burgerRef.current;
+      if (
+        menuEl &&
+        burgerEl &&
+        !menuEl.contains(e.target) &&
+        !burgerEl.contains(e.target)
+      ) {
+        setMenuOpen(false);
+      }
+    };
+
+    const handleEsc = (e) => {
+      if (e.key === "Escape") setMenuOpen(false);
+    };
+
+    document.addEventListener("pointerdown", handleOutside);
+    document.addEventListener("keydown", handleEsc);
+    return () => {
+      document.removeEventListener("pointerdown", handleOutside);
+      document.removeEventListener("keydown", handleEsc);
+    };
+  }, [menuOpen]);
 
   const isHebrew = i18n.language === "he";
 
@@ -119,7 +131,7 @@ const Navbar = () => {
       >
         <img src="images/logo192.png" alt="logo" className="logo-img" />
       </div>
-      <div className="burger">
+      <div className="burger" ref={burgerRef}>
         <button
           className="burger"
           onClick={() => setMenuOpen((prev) => !prev)}
@@ -131,12 +143,11 @@ const Navbar = () => {
         </button>
       </div>
 
-      <div className={`navbar-center ${menuOpen ? "open" : ""}`}>
+      <div className={`navbar-center ${menuOpen ? "open" : ""}`} ref={menuRef}>
         {navItems.map((item) => (
           <a
             key={item.href}
             href={item.href}
-            // onClick={() => setMenuOpen(false)}
             onClick={(e) => handleNavClick(e, item.href)}
             className={`nav-link ${active === item.href ? "active-link" : ""}`}
           >

@@ -2,7 +2,6 @@
 
 .App {
   text-align: center;
-  /* overflow-x: hidden; */
 }
 
 .App-logo {
@@ -28,10 +27,4 @@
 }
 .app-container {
   width: 100%;
-}
-html {
-  scroll-behavior: smooth;
-  margin: 0;
-  padding: 0;
-  /* overflow-x: hidden; */
 }

@@ -9,11 +9,14 @@
   opacity: 0;
   /* font-family: var(--animation-font); */
   font-size: large;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.16);
 }
 
 .projects-container h1 {
   margin-top: 0;
   font-size: 50px;
+  font-family: var(--he-font);
+  font-weight: 400;
 }
 .projects-container p {
   font-size: 36px;
