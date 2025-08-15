@@ -72,7 +72,27 @@ html.rtl .animation-title span {
     background: linear-gradient(to bottom, #000, #aaa);
   }
 }
+.word {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.5s forwards;
+  color: var(--primary-color);
+}
 
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUpFade {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 @media (max-width: 768px) {
   html.ltr .animation-title span {
     font-size: 35px;

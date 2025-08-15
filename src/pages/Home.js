@@ -20,10 +20,6 @@ const Home = () => {
       <div className="home-container">
         <div className="animation-wrapper">
           <h1 className="animation-title">
-            {/* {title.split("").map((letter, i) => (
-              <span key={i} style={{ animationDelay: `${i * 0.1}s` }}>
-                {letter === " " ? "\u00A0" : letter}
-              </span> */}
             {title.split(" ").map((word, i) => (
               <span
                 key={i}

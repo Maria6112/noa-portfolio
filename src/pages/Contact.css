@@ -37,6 +37,7 @@
   font-size: 1rem;
   outline: none;
   transition: border-color 0.3s ease;
+  font-family: var(--he-font);
 }
 
 .contact-form input::placeholder,
@@ -158,49 +159,12 @@ html.rtl .contact-form button {
 
 .form-status {
   margin-top: 20px;
-  font-size: 0.9rem;
+  font-size: 25px;
   color: var(--primary-color);
   text-align: center;
   animation: fadeIn 0.3s ease-in;
 }
-.animated-title {
-  display: flex;
-  flex-wrap: wrap;
-  font-size: 2.5rem;
-  font-weight: bold;
-  margin-bottom: 40px;
-  word-break: keep-all;
-  overflow-wrap: normal;
-  white-space: normal;
-}
-.letter {
-  display: inline-block;
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 0.5s forwards;
-}
 
-.word {
-  display: inline-block;
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 0.5s forwards;
-  color: var(--primary-color);
-}
-
-@keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes slideUpFade {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 @media screen and (max-width: 600px) {
   .contact-form {
     margin: 20px 10px;

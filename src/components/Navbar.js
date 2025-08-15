@@ -1,38 +1,37 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState, useRef, useMemo } from "react";
 import "./Navbar.css";
 import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "./LanguageSwitcher";
-// import logo from '../images/logo.JPG';
+// import logo from "images/logo192.png";
+const SECTION_IDS = ["home", "projects", "packages", "about", "contact"];
 
 const Navbar = () => {
   const { t, i18n } = useTranslation();
   const [menuOpen, setMenuOpen] = useState(false);
   const [active, setActive] = useState(window.location.hash || "#home");
-  const observerRef = useRef(null);
+  const [scrolled, setScrolled] = useState(false);
 
+  const observerRef = useRef(null);
   const burgerRef = useRef(null);
   const menuRef = useRef(null);
 
-  const navItems = [
-    { href: "#home", label: t("nav.home") },
-    { href: "#projects", label: t("nav.projects") },
-    { href: "#packages", label: t("nav.packages") },
-    { href: "#about", label: t("nav.about") },
-    { href: "#contact", label: t("nav.contact") },
-  ];
-  // Устанавливаем lang/dir на html
-  useEffect(() => {
-    document.documentElement.lang = i18n.language;
-    document.documentElement.dir = i18n.language === "he" ? "rtl" : "ltr";
-  }, [i18n.language]);
+  // Текст пунктов меню — зависит от языка
+  const navItems = useMemo(
+    () => [
+      { href: "#home", label: t("nav.home") },
+      { href: "#projects", label: t("nav.projects") },
+      { href: "#packages", label: t("nav.packages") },
+      { href: "#about", label: t("nav.about") },
+      { href: "#contact", label: t("nav.contact") },
+    ],
+    [t]
+  );
 
   // Обработчик клика по логотипу — скроллим наверх и делаем #home активным
   const handleLogoClick = () => {
     setMenuOpen(false);
     setActive("#home");
-    // Плавный скролл наверх
     window.scrollTo({ top: 0, behavior: "smooth" });
-    // Обновляем хэш в URL без смещения страницы
     window.history.replaceState(null, "", "#home");
   };
 
@@ -43,7 +42,6 @@ const Navbar = () => {
     if (el) {
       el.scrollIntoView({ behavior: "smooth", block: "start" });
     } else {
-      // fallback: прокрутить наверх
       window.scrollTo({ top: 0, behavior: "smooth" });
     }
     setActive(href);
@@ -51,11 +49,19 @@ const Navbar = () => {
     window.history.replaceState(null, "", href);
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 200); // если проскроллено больше 10px — ставим true
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
   // IntersectionObserver — следим за секциями и ставим active
   useEffect(() => {
-    const sections = navItems
-      .map((item) => document.querySelector(item.href))
-      .filter(Boolean);
+    const sections = SECTION_IDS.map((id) =>
+      document.getElementById(id)
+    ).filter(Boolean);
 
     if (!sections.length) return;
 
@@ -72,7 +78,6 @@ const Navbar = () => {
           const id = `#${entry.target.id}`;
           setActive((prev) => {
             if (prev !== id) {
-              // обновляем хэш в URL без добавления истории (не вызывает скролл)
               window.history.replaceState(null, "", id);
               return id;
             }
@@ -87,9 +92,9 @@ const Navbar = () => {
     sections.forEach((sec) => observerRef.current.observe(sec));
 
     return () => {
-      if (observerRef.current) observerRef.current.disconnect();
+      if (observerRef.current) observerRef.current?.disconnect();
     };
-  }, [t]); // зависимость t чтобы при смене языка пересобрать список секций (если id меняться не будут — ok)
+  }, []);
 
   useEffect(() => {
     if (!menuOpen) return;
@@ -122,7 +127,12 @@ const Navbar = () => {
   const isHebrew = i18n.language === "he";
 
   return (
-    <nav className={`navbar ${isHebrew ? "rtl" : "ltr"}`}>
+    <nav
+      className={`navbar 
+        ${isHebrew ? "rtl" : "ltr"} 
+        ${scrolled ? "scrolled" : ""}
+        `}
+    >
       <div
         className="navbar-logo"
         onClick={handleLogoClick}
@@ -133,7 +143,7 @@ const Navbar = () => {
       </div>
       <div className="burger" ref={burgerRef}>
         <button
-          className="burger"
+          className="burger-btn"
           onClick={() => setMenuOpen((prev) => !prev)}
           aria-label="Menu"
         >

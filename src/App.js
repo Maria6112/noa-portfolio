@@ -11,8 +11,16 @@ import ContactButtons from "./components/ContactButtons";
 import ContactForm from "./pages/ContactMe";
 import AOS from "aos";
 import AboutMe from "./pages/About";
+import { useTranslation } from "react-i18next";
 
 function App() {
+  const { i18n } = useTranslation();
+  // Устанавливаем lang/dir на html
+  useEffect(() => {
+    document.documentElement.lang = i18n.language;
+    document.documentElement.dir = i18n.language === "he" ? "rtl" : "ltr";
+  }, [i18n.language]);
+
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
   }, []);

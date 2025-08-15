@@ -11,10 +11,12 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-
-  /* color: white; */
+  transition: background-color 0.4s ease;
 }
-/* LTR (английский) */
+.navbar.scrolled {
+  background-color: var(--bg-color-solid);
+}
+
 .navbar.ltr {
   font-size: 20px;
 }
@@ -23,22 +25,20 @@ nav {
   font-size: 25px;
 }
 
-/* LTR (английский) */
 .navbar.ltr .navbar-logo {
-  order: -1; /* слева */
+  order: -1;
 }
 
 .navbar.ltr .lang-switch {
-  order: 2; /* справа */
+  order: 2;
 }
 
-/* RTL (иврит) */
 .navbar.rtl .navbar-logo {
-  order: -1; /* справа */
+  order: -1;
 }
 
 .navbar.rtl .lang-switch {
-  order: 2; /* слева */
+  order: 2;
 }
 
 .navbar-logo img {
@@ -74,7 +74,6 @@ nav {
   bottom: 0;
   width: 0%;
   height: 1px;
-  /* background-color: white; */
   background-color: var(--primary-color);
   transition: width 0.4s ease;
 }
@@ -88,7 +87,7 @@ html.rtl .nav-link::after {
 }
 
 /* Бургер скрыт на десктопе */
-.burger {
+.burger-btn {
   display: none;
   flex-direction: column;
   gap: 4px;
@@ -101,18 +100,17 @@ html.rtl .nav-link::after {
 .line {
   width: 24px;
   height: 3px;
-  /* background: white; */
   background: var(--primary-color);
   transition: all 0.3s ease;
 }
 .burger .line:nth-child(1) {
-  width: 24px; /* первая — как есть */
+  width: 24px;
 }
 .burger .line:nth-child(2) {
-  width: 14px; /* вторая — короче */
+  width: 14px;
 }
 .burger .line:nth-child(3) {
-  width: 18px; /* третья — длинее второй, но короче первой */
+  width: 18px;
 }
 .line.open:nth-child(1) {
   transform: rotate(45deg) translateY(7px);
@@ -129,16 +127,14 @@ html.rtl .nav-link::after {
     justify-content: space-between;
     position: sticky;
   }
-  /* Показываем бургер */
-  .burger {
+  .burger-btn {
     display: flex;
   }
 
-  /* Ссылки скрыты по умолчанию */
   .navbar-center {
     flex-direction: column;
     position: absolute;
-    top: 79px;
+    top: 74px;
     left: 0;
     right: 0;
     background-color: var(--bg-color-solid);
