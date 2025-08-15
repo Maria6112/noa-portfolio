@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 // import VideoModal from "./VideoModal";
+import { useTranslation } from "react-i18next";
+
 import "./VideoGallery.css";
 
 const translations = {
@@ -100,12 +102,8 @@ const videoSources = [
 ];
 
 const VideoGallery = () => {
-  const [lang, setLang] = useState("en");
-  useEffect(() => {
-    // Получаем язык из html атрибута lang
-    const htmlLang = document.documentElement.lang || "en";
-    setLang(htmlLang);
-  }, []);
+  const { i18n } = useTranslation();
+  const lang = i18n.language || "en";
 
   return (
     <div className="video-gallery ">

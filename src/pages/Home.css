@@ -17,7 +17,7 @@
   margin: 0 auto;
   color: var(--primary-color);
   font-size: 64px;
-  font-weight: bold;
+  font-weight: 100;
   justify-content: center;
   display: flex;
   flex-wrap: wrap;
@@ -96,12 +96,12 @@ html.rtl .animation-title span {
 @media (max-width: 768px) {
   html.ltr .animation-title span {
     font-size: 35px;
-    white-space: normal; /* изменили с nowrap */
-    word-break: break-word; /* чтобы можно было переносить слова */
+    white-space: normal;
+    word-break: break-word;
   }
   html.rtl .animation-title span {
-    font-size: 40px; /* чуть меньше чем 50 */
-    white-space: normal; /* изменили с nowrap */
+    font-size: 45px;
+    white-space: normal;
     word-break: break-word;
   }
 

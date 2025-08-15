@@ -3,19 +3,19 @@
 :root {
   --primary-color: rgb(74, 54, 54);
   --secondary-color: rgb(198, 193, 193);
+
   /* --bg-color: rgba(14, 14, 14, 0.509); */
-  /* --bg-color: rgba(147, 145, 144, 0.509); */
   /* --bg-color: #f8f3eed7; */
   --bg-color: rgba(206, 190, 136, 0.27);
   --bg-color-solid: rgb(249, 244, 229);
   --secondary-bg-color: rgba(97, 94, 94, 0.509);
   --third-bg-color: #f8f3ee;
 
-  --main-font: "Bona Nova SC", serif; /* для английского */
+  /* --main-font: "Bona Nova SC", serif; для английского */
+  --main-font: "Bellefair", serif; /* для английского */
   --he-font: "Bellefair", serif; /* для иврита */
 
   --secondary-font: "Poppins", sans-serif;
-  /* --animation-font: "Cormorant Garamond", serif; */
   --animation-font: "Libertinus Sans", sans-serif;
   /* --animation-font: "Bellefair", serif; */
 
