@@ -15,54 +15,102 @@
 }
 
 .package-section h1 {
-  font-size: 2.5rem;
+  font-size: 40px;
+  font-weight: 100;
   margin-bottom: 40px;
   color: var(--primary-color);
   text-align: center;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
 
 .package-card {
+  display: flex;
+  flex-direction: column;
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 12px;
-  padding: 25px 20px;
+  padding: 25px;
   margin-bottom: 30px;
-  color: white;
+  color: var(--primary-color);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  position: relative;
+  will-change: transform;
 }
 
 .package-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-10px);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  z-index: 2;
+}
+/* Разные фоны для пакетов */
+.package-basic {
+  background: var(--bg-color); /* нежный голубой */
+}
+
+.package-premium {
+  background: rgba(137, 136, 136, 0.15); /* легкий серый */
+}
+
+.package-luxury {
+  background: rgba(255, 223, 100, 0.15); /* мягкий золотой */
 }
 
 .package-card h2 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-  color: var(--secondary-color);
+  font-size: 35px;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  color: var(--primary-color);
+  font-weight: 300;
+  position: relative;
+  /* border-bottom: 2px solid rgba(255, 255, 255, 0.3); */
+}
+/* полоска под заголовком */
+.package-card h2::after {
+  content: "";
+  display: block;
+  width: 60px; /* ширина полоски */
+  height: 4px; /* толщина */
+  background-color: var(--secondary-color); /* цвет полоски */
+  margin: 10px auto 0 auto; /* выравнивание по центру */
+  border-radius: 2px; /* скругление краёв полоски */
+  transition: all 0.3s ease;
+}
+
+.package-card:hover h2::after {
+  background-color: var(--primary-color);
 }
 
 .package-card p {
   font-size: 1rem;
-  color: #ccc;
+  color: var(--primary-color);
   line-height: 1.6;
 }
 
-/* Light theme support */
-:root.light .package-card {
-  background: #fff;
-  color: #111;
-  border: 1px solid #ddd;
+.multiline {
+  white-space: pre-line; /* воспринимает \n как перенос строки */
 }
-
-:root.light .package-card h2 {
+.package-card ul {
+  /* padding-right: 20px; */
+  padding-bottom: 20px;
+  margin: 0;
+  list-style: disc;
   color: var(--primary-color);
 }
+html.ltr .package-card ul {
+  text-align: left;
+}
 
-:root.light .package-card p {
-  color: #333;
+html.rtl .package-card ul {
+  text-align: right; /* чтобы список слева был читаем */
+  direction: rtl; /* для иврита */
+}
+
+.package-card li {
+  margin-bottom: 6px;
+  line-height: 1.6;
+  color: var(--primary-color);
 }
 
 /* Responsive */

@@ -12,6 +12,10 @@
   transform: translateY(-50%);
 }
 
+.contact-btn .icon {
+  font-size: 28px;
+}
+
 html.rtl .contact-buttons {
   right: auto;
   left: 5px;
@@ -29,7 +33,7 @@ html.rtl .contact-buttons {
   gap: 10px;
   padding: 10px;
   font-size: 16px;
-  border-radius: 40px;
+  border-radius: 50px;
   text-decoration: none;
   font-weight: 500;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
@@ -40,6 +44,19 @@ html.rtl .contact-buttons {
   transform: translateY(-2px) scale(1.05);
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
   opacity: 0.95;
+}
+/* WhatsApp: зелёный круг, белая иконка */
+.contact-btn.whatsapp {
+  background-color: #25d366;
+  color: white;
+  padding: 12px;
+}
+
+/* Telegram: белая обводка + синий круг внутри */
+.contact-btn.telegram {
+  background-color: #0088cc;
+  color: white;
+  border: 5px solid white;
 }
 
 /* Мобильная адаптация */

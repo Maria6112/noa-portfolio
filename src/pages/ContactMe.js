@@ -42,7 +42,7 @@ const ContactForm = () => {
       data-aos="zoom-in"
       data-aos-delay="100"
     >
-      <h2 className="fade-in-title">{t("contact.title")}</h2>
+      <h2 className="contact-title">{t("contact.title")}</h2>
       <label>{t("contact.name")}</label>
       <input
         type="text"

@@ -1,15 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Bona+Nova+SC&family=Bellefair&family=Gruppo&family=Libertinus+Sans:ital,wght@0,400;0,700&display=swap");
 
 :root {
-  --primary-color: rgb(74, 54, 54);
+  --primary-color: rgb(71, 40, 0);
   --secondary-color: rgb(198, 193, 193);
 
-  /* --bg-color: rgba(14, 14, 14, 0.509); */
-  /* --bg-color: #f8f3eed7; */
-  --bg-color: rgba(206, 190, 136, 0.27);
-  --bg-color-solid: rgb(249, 244, 229);
+  --bg-color: rgba(233, 228, 219, 0.247);
+  --bg-color-solid: RGB(233, 228, 219);
   --secondary-bg-color: rgba(97, 94, 94, 0.509);
-  --third-bg-color: #f8f3ee;
+  /* color from her lovely web #f8f3ee; */
 
   /* --main-font: "Bona Nova SC", serif; для английского */
   --main-font: "Bellefair", serif; /* для английского */

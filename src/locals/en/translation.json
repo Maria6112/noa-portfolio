@@ -12,8 +12,12 @@
   "packages": {
     "wedding": "Wedding Packages",
     "basic": "Basic",
+    "basic-info": "Up to 2 hours shooting\nHighlight video (3-5 min)\nOnline gallery delivery",
     "premium": "Premium",
+    "premium-info": "Up to 5 hours shooting\nHighlight video (5-7 min)\nFull video edit (20-30 min)\nUSB + online delivery",
+
     "luxury": "Luxury",
+    "luxury-info": "Full day coverage\nHighlight video (7-10 min)\nFull film (40-60 min)\nDrone shots included\nPersonalized box with USB",
     "business": "Business Promotional",
     "starter": "Starter",
     "pro": "Pro",

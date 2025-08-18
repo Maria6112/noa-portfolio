@@ -11,7 +11,7 @@ const ContactButtons = () => {
         rel="noopener noreferrer"
         className="contact-btn whatsapp"
       >
-        <FaWhatsapp size={30} color="#25D366" />
+        <FaWhatsapp className="icon" />
       </a>
       <a
         href="https://t.me/+972515330681"
@@ -19,7 +19,7 @@ const ContactButtons = () => {
         rel="noopener noreferrer"
         className="contact-btn telegram"
       >
-        <FaTelegramPlane size={30} color="#0088cc" />
+        <FaTelegramPlane className="icon" />
       </a>
     </div>
   );

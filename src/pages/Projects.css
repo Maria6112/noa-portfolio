@@ -17,6 +17,7 @@
   font-size: 50px;
   font-family: var(--he-font);
   font-weight: 400;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
 .projects-container p {
   font-size: 36px;

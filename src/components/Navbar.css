@@ -11,18 +11,18 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  transition: background-color 0.4s ease;
+  transition: background-color 0.7s ease;
 }
 .navbar.scrolled {
   background-color: var(--bg-color-solid);
 }
 
 .navbar.ltr {
-  font-size: 20px;
+  font-size: 25px;
 }
 
 .navbar.rtl .nav-link {
-  font-size: 25px;
+  font-size: 35px;
 }
 
 .navbar.ltr .navbar-logo {
@@ -143,6 +143,7 @@ html.rtl .nav-link::after {
     text-align: center;
     gap: 20px;
     padding: 0;
+    transition: max-height 0.4s ease, padding 0.4s ease;
   }
   .navbar-center.open {
     max-height: 300px;

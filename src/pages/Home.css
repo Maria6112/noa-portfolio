@@ -12,8 +12,8 @@
 }
 
 .animation-title {
-  align-items: center; /* центрируем по горизонтали */
-  width: fit-content; /* чтобы контейнер не растягивался */
+  align-items: center;
+  width: fit-content;
   margin: 0 auto;
   color: var(--primary-color);
   font-size: 64px;
@@ -22,7 +22,6 @@
   display: flex;
   flex-wrap: wrap;
   gap: 0.2em;
-  /* margin-top: 0px; */
   white-space: nowrap;
   font-family: var(--animation-font);
 }
@@ -39,7 +38,6 @@
   opacity: 0;
   transform: translateY(40px);
   animation: slideIn 0.5s forwards;
-  /* font-family: var(--animation-font); */
 }
 html.ltr .animation-title,
 html.ltr .animation-title span {
@@ -51,7 +49,11 @@ html.rtl .animation-title span {
   font-family: var(--animation-font-he);
   font-size: 100px;
 }
-
+.animation-title,
+.animation-title span,
+.animation-title .word {
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3), 0 0 12px rgba(71, 40, 0, 0.4);
+}
 @keyframes slideIn {
   to {
     opacity: 1;
