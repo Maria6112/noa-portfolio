@@ -1,6 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Bona+Nova+SC&family=Bellefair&family=Gruppo&family=Libertinus+Sans:ital,wght@0,400;0,700&display=swap");
 @import "../src/styles/variables.css";
-
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+section,
+footer {
+  overflow: hidden;
+  white-space: wrap;
+  word-break: break-word;
+}
 body {
   width: 100%;
   margin: 0;

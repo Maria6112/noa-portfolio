@@ -48,7 +48,7 @@
 .lang-dropdown {
   position: absolute;
   top: 45px;
-  background: var(--bg-color);
+  background: var(--bg-color-solid);
   margin-top: 5px;
   border-radius: 4px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
