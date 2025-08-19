@@ -1,37 +1,66 @@
 import React, { useState } from "react";
-import emailjs from "@emailjs/browser";
+// import emailjs from "@emailjs/browser";
 import { useTranslation } from "react-i18next";
-
+import PhoneInput from "react-phone-input-2";
+import "react-phone-input-2/lib/style.css";
 import "./Contact.css";
 
 const ContactForm = () => {
   const { t } = useTranslation();
 
-  const [form, setForm] = useState({ name: "", email: "", message: "" });
-  const [status, setStatus] = useState("");
+  const [form, setForm] = useState({
+    name: "",
+    phone: "",
+    email: "",
+    message: "",
+  });
+  const [status, setStatus] = useState({ message: "", type: "" });
 
   const handleChange = (e) => {
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
+  const handlePhoneChange = (phone) => {
+    console.log("Phone changed:", phone, "Length:", phone.length);
 
+    setForm((prev) => ({ ...prev, phone }));
+  };
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (!form.name || !form.email || !form.message) {
-      setStatus(t("contact.errors.fillAll"));
+    if (form.phone.length <= 10) {
+      setStatus({
+        message: t("contact.errors.incorrectNumber"),
+        type: "error",
+      });
       return;
     }
+
+    if (!form.name || !form.phone || !form.email || !form.message) {
+      setStatus({ message: t("contact.errors.fillAll"), type: "error" });
+      return;
+    }
+
     try {
-      await emailjs.send(
-        "service_4qbsue1",
-        "template_mje15rp",
-        form,
-        "Scuu1QvAY13jEqBtb"
+      await fetch(
+        "https://hook.eu2.make.com/d8rrpx48kudbjw3ahc4a4x7stwns46cn",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            name: form.name,
+            phone: form.phone,
+            email: form.email,
+            message: form.message,
+          }),
+        }
       );
-      setForm({ name: "", email: "", message: "" });
-      setStatus(t("contact.success"));
+      console.log(form);
+      setForm({ name: "", phone: "", email: "", message: "" });
+      setStatus({ message: t("contact.success"), type: "success" });
     } catch (err) {
-      setStatus(t("contact.errors.sendError"));
+      console.error(err);
+
+      setStatus({ message: t("contact.errors.sendError"), type: "error" });
     }
   };
 
@@ -51,6 +80,19 @@ const ContactForm = () => {
         onChange={handleChange}
         placeholder={t("contact.placeholders.name")}
         required
+      />
+      <label>{t("contact.phone")}</label>
+      <PhoneInput
+        country={"il"}
+        value={form.phone}
+        onChange={handlePhoneChange}
+        enableSearch={true}
+        inputStyle={{ width: "100%" }}
+        inputProps={{
+          name: "phone",
+          required: true,
+          autoFocus: false,
+        }}
       />
 
       <label>{t("contact.email")}</label>
@@ -75,7 +117,9 @@ const ContactForm = () => {
 
       <button type="submit">{t("contact.send")} </button>
 
-      {status && <p className="form-status">{status}</p>}
+      {status.message && (
+        <p className={`form-status ${status.type}`}>{status.message}</p>
+      )}
     </form>
   );
 };

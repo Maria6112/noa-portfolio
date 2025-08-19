@@ -35,7 +35,7 @@
   border: none;
   border-bottom: 1px solid var(--primary-color);
   color: var(--primary-color);
-  font-size: 1rem;
+  font-size: 20px;
   outline: none;
   transition: border-color 0.3s ease;
   font-family: var(--he-font);
@@ -64,19 +64,6 @@
   font-family: var(--he-font);
   font-size: 20px;
 }
-
-/* .contact-form button {
-  font-family: "Poppins", sans-serif;
-  margin-top: 30px;
-  padding: 12px 24px;
-  font-size: 1rem;
-  color: var(--primary-color);
-  background: var(--bg-color);
-  background-color: var(--bg-color);
-  border: none;
-  cursor: pointer;
-  transition: background 0.3s ease;
-} */
 
 .contact-form button {
   font-family: var(--he-font);
@@ -165,7 +152,76 @@ html.rtl .contact-form button {
   text-align: center;
   animation: fadeIn 0.3s ease-in;
 }
+.form-status.success {
+  color: #4caf50; /* зелёный */
+}
 
+.form-status.error {
+  color: #f44336; /* красный */
+}
+.contact-form .react-tel-input {
+  width: 100%;
+  direction: ltr; /* базово слева направо, чтобы номер не "прятался" под флаг */
+}
+
+html.rtl .contact-form .react-tel-input {
+  direction: rtl; /* в иврите переключаем */
+  padding-left: 30px;
+}
+
+.contact-form .react-tel-input .form-control {
+  width: 100%;
+  background: transparent !important;
+  border: none !important;
+  border-bottom: 1px solid var(--primary-color) !important;
+  border-radius: 0 !important;
+  color: var(--primary-color) !important;
+  font-size: 1rem;
+  font-family: var(--he-font);
+  padding: 10px 40px 10px 50px !important; /* место для флага и стрелки */
+  outline: none !important;
+  box-shadow: none !important;
+}
+.contact-form .react-tel-input .form-control:focus {
+  border-bottom: 1px solid var(--secondary-color) !important;
+}
+
+html.rtl .contact-form .react-tel-input .form-control {
+  padding: 10px 50px 10px 40px;
+}
+
+.contact-form .react-tel-input .flag-dropdown {
+  background: transparent !important;
+  border: none !important;
+  border-bottom: 1px solid var(--primary-color) !important;
+  border-radius: 0 !important;
+}
+
+.contact-form .react-tel-input .selected-flag {
+  background: transparent !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.contact-form .react-tel-input .selected-flag .arrow {
+  border-top: 4px solid var(--primary-color) !important;
+  border-left: 4px solid transparent !important;
+  border-right: 4px solid transparent !important;
+  right: 5px;
+}
+
+html.rtl .contact-form .react-tel-input .selected-flag .arrow {
+  left: auto;
+  right: 25px;
+}
+
+.contact-form .react-tel-input .country-list {
+  background: var(--bg-color-solid) !important;
+  border: 1px solid var(--primary-color) !important;
+  color: var(--primary-color);
+}
 @media screen and (max-width: 600px) {
   .contact-form {
     margin: 20px 10px;

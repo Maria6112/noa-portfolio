@@ -42,12 +42,14 @@
     "placeholders": {
       "name": "Your name",
       "email": "Your email",
-      "message": "How can I help you?"
+      "message": "How can I help you?",
+      "phone": "Phone number"
     },
     "success": "Message sent!",
     "errors": {
       "fillAll": "Please fill out all fields",
-      "sendError": "Error in sending. Try to contact by phone"
+      "sendError": "Error in sending. Try to contact by phone",
+      "incorrectNumber": "Incorrect phone number"
     }
   },
   "contactButton": {

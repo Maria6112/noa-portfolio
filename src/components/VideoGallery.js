@@ -16,7 +16,7 @@ const translations = {
   },
   he: {
     videos: [
-      { title: "דביר | נועה" },
+      { title: "דביר | נעה" },
       { title: "מיכל | יהודה" },
       { title: "רוני | עוז" },
       { title: "שובל אביגיל | יצחק" },
@@ -64,10 +64,9 @@ const VideoGallery = () => {
   return (
     <div className="video-gallery ">
       {videoSources.map((video, index) => (
-        <div className="video-card">
+        <div className="video-card" key={video.id}>
           <div className="video-wrapper">
             <video
-              key={video.id}
               src={video.videoUrl}
               // poster={video.thumbnail}
               controls

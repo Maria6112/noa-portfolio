@@ -92,7 +92,7 @@ html.rtl .nav-link::after {
 .burger-btn {
   display: none;
   flex-direction: column;
-  gap: 4px;
+  gap: 6px;
   background: none;
   border: none;
   cursor: pointer;
@@ -101,7 +101,7 @@ html.rtl .nav-link::after {
 }
 .line {
   width: 24px;
-  height: 3px;
+  height: 1px;
   background: var(--primary-color);
   transition: all 0.3s ease;
 }
@@ -154,7 +154,13 @@ html.rtl .nav-link::after {
   .navbar.ltr .navbar-logo {
     order: 2;
   }
+  .navbar.ltr {
+    font-size: 20px;
+  }
 
+  .navbar.rtl .nav-link {
+    font-size: 25px;
+  }
   .navbar.ltr .lang-switch {
     order: 2;
   }
