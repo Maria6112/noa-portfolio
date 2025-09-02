@@ -33,13 +33,13 @@ function App() {
         <Home />
       </section>
 
-      <section id="projects">
+      {/* <section id="projects">
         <Projects />
-      </section>
+      </section> */}
 
-      <section id="packages">
+      {/* <section id="packages">
         <Packages />
-      </section>
+      </section> */}
 
       <section id="about">
         <AboutMe />

@@ -19,8 +19,8 @@ const Navbar = () => {
   const navItems = useMemo(
     () => [
       { href: "#home", label: t("nav.home") },
-      { href: "#projects", label: t("nav.projects") },
-      { href: "#packages", label: t("nav.packages") },
+      // { href: "#projects", label: t("nav.projects") },
+      // { href: "#packages", label: t("nav.packages") },
       { href: "#about", label: t("nav.about") },
       { href: "#contact", label: t("nav.contact") },
     ],
@@ -139,7 +139,7 @@ const Navbar = () => {
         role="button"
         tabIndex={0}
       >
-        <img src="images/logo192.png" alt="logo" className="logo-img" />
+        <img src="images/N.png" alt="logo" className="logo-img" />
       </div>
       <div className="burger" ref={burgerRef}>
         <button

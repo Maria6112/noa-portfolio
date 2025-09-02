@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 // import VideoModal from "./VideoModal";
 import { useTranslation } from "react-i18next";
 

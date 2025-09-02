@@ -1,7 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Bona+Nova+SC&family=Bellefair&family=Gruppo&family=Libertinus+Sans:ital,wght@0,400;0,700&display=swap");
 
 :root {
-  --primary-color: rgb(71, 40, 0);
+  /* --primary-color: rgb(71, 40, 0); */
+  --primary-color: rgb(101, 79, 49);
   --secondary-color: rgb(198, 193, 193);
 
   --bg-color: rgba(233, 228, 219, 0.247);

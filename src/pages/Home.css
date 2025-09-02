@@ -6,11 +6,37 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 80px;
+  /* padding: 80px; */
   color: var(--primary-color);
   justify-content: center;
 }
-
+.background-section {
+  width: 100%;
+  height: 50vh;
+  /* background-image: url("../../public/images/background-wedding.jpg"); */
+  background-size: cover; /* масштабирует, чтобы покрыть весь блок */
+  background-position: center bottom; /* центрирует изображение */
+  background-repeat: no-repeat;
+  /* position: relative; */
+  /* display: flex; */
+  /* justify-content: center;
+  align-items: center; */
+  /* color: black; */
+  /* text-shadow: 0 0 10px rgba(0, 0, 0, 0.2); */
+}
+.background-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.4);
+  z-index: 0;
+}
+.animation-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* margin-top: -0px; */
+}
 .animation-title {
   align-items: center;
   width: fit-content;
@@ -49,11 +75,11 @@ html.rtl .animation-title span {
   font-family: var(--animation-font-he);
   font-size: 100px;
 }
-.animation-title,
+/* .animation-title,
 .animation-title span,
 .animation-title .word {
   text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3), 0 0 12px rgba(71, 40, 0, 0.4);
-}
+} */
 @keyframes slideIn {
   to {
     opacity: 1;
@@ -64,7 +90,8 @@ html.rtl .animation-title span {
   width: 2px;
   height: 0; /* стартовая высота */
   background-color: var(--primary-color);
-  margin: 20px auto 0; /* отступ сверху + выравнивание по центру */
+  margin: 20px auto;
+  /* отступ сверху + выравнивание по центру */
   animation: growLine 1s ease-out 1.2s forwards; /* задержка, чтобы начиналась после текста */
 }
 
