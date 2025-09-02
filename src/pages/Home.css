@@ -137,4 +137,7 @@ html.rtl .animation-title span {
   .animation-title {
     white-space: normal; /* разрешаем перенос */
   }
+  .animation-wrapper {
+    margin-top: -100px;
+  }
 }

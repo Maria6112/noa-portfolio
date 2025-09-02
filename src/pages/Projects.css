@@ -10,6 +10,7 @@
   /* font-family: var(--animation-font); */
   font-size: large;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.16);
+  margin-top: -20px;
 }
 
 .projects-container h1 {
