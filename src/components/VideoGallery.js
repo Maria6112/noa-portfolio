@@ -37,12 +37,12 @@ const videoSources = [
     id: "2",
     videoUrl:
       "https://www.dropbox.com/scl/fi/yu7ksilmwacgcdtnljn6b/04.12.24.mp4?rlkey=rz0813nocvcgnb1mi2t0sslmf&e=1&st=kwi2wc5j&raw=1",
-    thumbnail: "/images/roni&oz.jpg",
   },
   {
     id: "3",
     videoUrl:
       "https://www.dropbox.com/scl/fi/2rundd75ngvguz8vtelez/.mp4?rlkey=txkhhsa2zqjcmecdtj4oio492&st=y7u9umov&raw=1",
+    thumbnail: "/images/roni&oz.jpg",
   },
   {
     id: "4",
