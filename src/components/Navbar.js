@@ -49,14 +49,15 @@ const Navbar = () => {
     window.history.replaceState(null, "", href);
   };
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 200); // если проскроллено больше 10px — ставим true
-    };
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     setScrolled(window.scrollY > 200); // если проскроллено больше 10px — ставим true
+  //   };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  //   window.addEventListener("scroll", handleScroll);
+  //   return () => window.removeEventListener("scroll", handleScroll);
+  // }, []);
+
   // IntersectionObserver — следим за секциями и ставим active
   useEffect(() => {
     const sections = SECTION_IDS.map((id) =>
