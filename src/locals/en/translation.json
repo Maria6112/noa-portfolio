@@ -42,7 +42,7 @@
     "placeholders": {
       "name": "Your name",
       "email": "Your email",
-      "message": "How can I help you?",
+      "message": "Special requests and details",
       "phone": "Phone number"
     },
     "success": "Message sent!",

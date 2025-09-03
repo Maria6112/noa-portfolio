@@ -37,6 +37,7 @@ const videoSources = [
     id: "2",
     videoUrl:
       "https://www.dropbox.com/scl/fi/yu7ksilmwacgcdtnljn6b/04.12.24.mp4?rlkey=rz0813nocvcgnb1mi2t0sslmf&e=1&st=kwi2wc5j&raw=1",
+    thumbnail: "/images/roni&oz.jpg",
   },
   {
     id: "3",
@@ -68,7 +69,7 @@ const VideoGallery = () => {
           <div className="video-wrapper">
             <video
               src={video.videoUrl}
-              // poster={video.thumbnail}
+              poster={video.thumbnail}
               controls
               controlsList="nodownload"
               onContextMenu={(e) => e.preventDefault()}
