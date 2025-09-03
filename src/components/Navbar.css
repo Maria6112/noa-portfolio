@@ -113,6 +113,7 @@ html.rtl .nav-link::after {
 }
 .burger .line:nth-child(2) {
   width: 14px;
+  height: 1px;
 }
 .burger .line:nth-child(3) {
   width: 18px;
