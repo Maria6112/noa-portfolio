@@ -41,9 +41,9 @@ function App() {
         <Packages />
       </section> */}
 
-      <section id="about">
+      {/* <section id="about">
         <AboutMe />
-      </section>
+      </section> */}
       <section id="contact">
         <ContactForm />
       </section>
