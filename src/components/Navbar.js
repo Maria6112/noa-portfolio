@@ -21,7 +21,7 @@ const Navbar = () => {
       { href: "#home", label: t("nav.home") },
       // { href: "#projects", label: t("nav.projects") },
       // { href: "#packages", label: t("nav.packages") },
-      // { href: "#about", label: t("nav.about") },
+      { href: "#about", label: t("nav.about") },
       { href: "#contact", label: t("nav.contact") },
     ],
     [t]
