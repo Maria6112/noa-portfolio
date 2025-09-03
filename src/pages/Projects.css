@@ -2,6 +2,7 @@
 
 .projects-container {
   padding: 20px;
+  padding-top: 50px;
   /* background-color: var(--third-bg-color); */
   text-align: center;
   color: var(--primary-color);
@@ -10,7 +11,7 @@
   /* font-family: var(--animation-font); */
   font-size: large;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.16);
-  margin-top: -20px;
+  /* margin-top: -20px; */
 }
 
 .projects-container h1 {

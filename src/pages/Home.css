@@ -8,7 +8,7 @@
   align-items: center;
   /* padding: 80px; */
   color: var(--primary-color);
-  justify-content: center;
+  justify-content: flex-end;
 }
 .background-section {
   width: 100%;
@@ -17,12 +17,6 @@
   background-size: cover; /* масштабирует, чтобы покрыть весь блок */
   background-position: center bottom; /* центрирует изображение */
   background-repeat: no-repeat;
-  /* position: relative; */
-  /* display: flex; */
-  /* justify-content: center;
-  align-items: center; */
-  /* color: black; */
-  /* text-shadow: 0 0 10px rgba(0, 0, 0, 0.2); */
 }
 .background-section::before {
   content: "";
@@ -36,7 +30,7 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
-  /* margin-top: -0px; */
+  /* margin-top: -200px; */
 }
 .animation-title {
   align-items: center;
@@ -139,7 +133,10 @@ html.rtl .animation-title span {
   .animation-title {
     white-space: normal; /* разрешаем перенос */
   }
-  .animation-wrapper {
+  /* .animation-wrapper {
     margin-top: -100px;
+  } */
+  .animation-wrapper {
+    margin-bottom: 70px;
   }
 }
