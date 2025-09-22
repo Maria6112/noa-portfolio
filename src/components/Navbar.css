@@ -47,9 +47,10 @@ section {
 }
 
 .navbar-logo img {
-  width: 130px;
+  width: 200px;
   height: 60px;
   cursor: pointer;
+  object-fit: cover;
 }
 
 /* Ссылки по центру на десктопе */
@@ -136,7 +137,12 @@ html.rtl .nav-link::after {
   .burger-btn {
     display: flex;
   }
-
+  .navbar-logo img {
+    width: 160px;
+    height: 60px;
+    cursor: pointer;
+    object-fit: cover;
+  }
   .navbar-center {
     flex-direction: column;
     position: absolute;
