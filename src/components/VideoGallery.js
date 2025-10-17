@@ -40,7 +40,8 @@ const videoSources = [
     type: "vimeo",
     videoUrl:
       // "https://www.dropbox.com/scl/fi/yu7ksilmwacgcdtnljn6b/04.12.24.mp4?rlkey=rz0813nocvcgnb1mi2t0sslmf&e=1&st=kwi2wc5j&raw=1",
-      "https://player.vimeo.com/video/1118986580?h=3503314126",
+      // "https://player.vimeo.com/video/1118986580?h=3503314126",
+      "https://player.vimeo.com/video/1122627621",
   },
   {
     id: "3",

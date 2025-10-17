@@ -14,9 +14,9 @@ const AboutMe = () => {
           <p> {t("about.text1")}</p>
           <p> {t("about.text2")}</p>
         </div>
-        <div className="about-me-photo" data-aos="fade-right">
+        {/* <div className="about-me-photo" data-aos="fade-right">
           <img src="/images/neom1.jpg" alt="About me" />
-        </div>
+        </div> */}
       </div>
     </div>
   );
