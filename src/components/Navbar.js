@@ -140,7 +140,7 @@ const Navbar = () => {
         role="button"
         tabIndex={0}
       >
-        <img src="images/LibaFilms1.svg" alt="logo" className="logo-img" />
+        <img src="images/libafilms.svg" alt="logo" className="logo-img" />
       </div>
       <div className="burger" ref={burgerRef}>
         <button
