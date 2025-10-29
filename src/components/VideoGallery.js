@@ -48,7 +48,7 @@ const videoSources = [
     id: "4",
     type: "youtube",
     videoUrl: "https://www.youtube.com/embed/qA21dZoZ1Cg?si=MuTxb4nq3r0tW1Vy",
-    thumbnail: "/images/shoval&izhak.png",
+    thumbnail: "/images/sh&i.png",
   },
   // {
   //   id: "5",
