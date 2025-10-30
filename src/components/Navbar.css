@@ -8,7 +8,6 @@ section {
   /* background-color: var(--bg-color); */
   background-color: white;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.16);
-
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -44,6 +43,11 @@ section {
 
 .navbar.rtl .lang-switch {
   order: 2;
+}
+.navbar-logo {
+  width: 50px;
+  position: relative;
+  z-index: 10;
 }
 
 .navbar-logo img {
@@ -103,6 +107,7 @@ html.rtl .nav-link::after {
   padding: 8px;
   /* order: 3; */
 }
+
 .line {
   width: 24px;
   height: 1px;
@@ -136,6 +141,9 @@ html.rtl .nav-link::after {
   }
   .burger-btn {
     display: flex;
+  }
+  .navbar-logo {
+    width: auto;
   }
   .navbar-logo img {
     width: 160px;

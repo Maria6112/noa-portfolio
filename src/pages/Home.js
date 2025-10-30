@@ -3,6 +3,8 @@ import "./Projects.css";
 import VideoGallery from "../components/VideoGallery";
 import { useTranslation } from "react-i18next";
 import "./Home.css";
+import { ReactComponent as TitleSVG_HE } from "../styles/font1.svg";
+import { ReactComponent as TitleSVG_EN } from "../styles/font.svg";
 
 const Home = () => {
   const { i18n, t } = useTranslation();
@@ -17,12 +19,14 @@ const Home = () => {
   const totalWords = title.split(" ").length;
   const lineAnimationDelay = (totalWords - 1) * 0.4 + 0.6;
 
+  const TitleSVG = currentLang === "he" ? TitleSVG_HE : TitleSVG_EN;
+
   return (
     <div>
       {/* --- Home Section --- */}
       <section id="home" dir={currentLang === "he" ? "rtl" : "ltr"}>
         <div className="home-container background-section">
-          <div className="animation-wrapper">
+          {/* <div className="animation-wrapper">
             <h1 className="animation-title">
               {title.split(" ").map((word, i) => (
                 <span
@@ -34,8 +38,12 @@ const Home = () => {
                 </span>
               ))}
             </h1>
+          </div> */}
+          <div className="animation-wrapper">
+            <div className="svg-title">
+              <TitleSVG className="animated-svg" />
+            </div>
           </div>
-
           <div
             className="vertical-line"
             style={{ animationDelay: `${lineAnimationDelay}s` }}
