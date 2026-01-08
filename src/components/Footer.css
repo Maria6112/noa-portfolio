@@ -34,35 +34,78 @@ h4 {
   gap: 8px;
 }
 
-.social-icons {
+.social {
   display: block;
   gap: 12px;
+  margin: 10px;
+}
+.social-icons,
+.email-icons,
+.phone-number {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 5px;
 }
 
-.icon-btn-whatsapp,
-.icon-btn-telegram {
-  /* color: white; */
+/* .icon-btn-whatsapp,
+.icon-btn-telegram,
+.icon-btn-tiktok {
   color: var(--primary-color);
 
   text-decoration: none;
   transition: transform 0.3s ease;
   margin: 5px;
+} */
+.icon-btn-whatsapp,
+.icon-btn-telegram,
+.icon-btn-tiktok {
+  color: var(--primary-color);
+  text-decoration: none;
+
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 22px;
+
+  transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+
+  margin: 5px;
 }
 
 .icon-btn-whatsapp:hover {
-  color: #25d366;
+  color: white;
   transform: scale(1.1);
+  background-color: #25d366;
+  border-radius: 50%;
 }
 
 .icon-btn-telegram:hover {
-  color: #0088cc;
+  color: white;
+  background-color: #0088cc;
+  border-radius: 50%;
+
+  transform: scale(1.1);
+}
+/* .icon-btn-tiktok {
+  border: 1px solid var(--primary-color);
+} */
+
+.icon-btn-tiktok:hover {
+  background-color: #000;
+  border-radius: 50%;
+
+  color: #fff;
   transform: scale(1.1);
 }
 
 .phone-number {
   font-size: 20px;
-  /* color: white; */
   color: var(--primary-color);
 }
 

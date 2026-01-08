@@ -4,6 +4,7 @@ import {
   FaWhatsapp,
   FaTelegramPlane,
   FaPhone,
+  FaTiktok,
 } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
 
@@ -14,35 +15,52 @@ const Footer = () => {
     <footer>
       <div className="site-footer">
         <h4>{t("footer.contacts")}</h4>
-        <div className="social-icons">
-          <a
-            href="https://wa.me/972515330681"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="icon-btn-whatsapp"
-          >
-            <FaWhatsapp size={25} />
-          </a>
-          <a
-            href="https://t.me/+972515330681"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="icon-btn-telegram"
-          >
-            <FaTelegramPlane size={25} />
-          </a>
+
+        <div className="social">
+          {/* ИКОНКИ — ОДНА СТРОКА */}
           <div className="social-icons">
-            <a href="mailto: noaliba10@gmail.com" className="email-link">
-              <FaEnvelope className="email-icon" /> noaliba10@gmail.com
+            <a
+              href="https://www.tiktok.com/@liba.films?_r=1&_t=ZS-92sJE6m4ojp"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="icon-btn-tiktok"
+            >
+              <FaTiktok size={24} />
+            </a>
+            <a
+              href="https://wa.me/972515330681"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="icon-btn-whatsapp"
+            >
+              <FaWhatsapp size={25} />
+            </a>
+
+            <a
+              href="https://t.me/+972515330681"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="icon-btn-telegram"
+            >
+              <FaTelegramPlane size={25} />
+            </a>
+          </div>
+
+          {/* EMAIL — ОТДЕЛЬНАЯ СТРОКА */}
+          <div className="email-icons">
+            <a href="mailto:noaliba10@gmail.com" className="email-link">
+              <FaEnvelope /> noaliba10@gmail.com
+            </a>
+          </div>
+
+          {/* PHONE — ОТДЕЛЬНАЯ СТРОКА */}
+          <div className="phone-number">
+            <a href="tel:+972515330681" className="phone-link">
+              <FaPhone style={{ marginRight: "6px" }} />
+              972-51-5330681
             </a>
           </div>
         </div>
-        <span className="phone-number">
-          <a href="tel:+972515330681" className="phone-link">
-            <FaPhone style={{ margin: "6px" }} />
-            972-51-5330681
-          </a>
-        </span>
       </div>
 
       <div className="footer-bottom">
