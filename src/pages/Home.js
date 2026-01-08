@@ -26,19 +26,6 @@ const Home = () => {
       {/* --- Home Section --- */}
       <section id="home" dir={currentLang === "he" ? "rtl" : "ltr"}>
         <div className="home-container background-section">
-          {/* <div className="animation-wrapper">
-            <h1 className="animation-title">
-              {title.split(" ").map((word, i) => (
-                <span
-                  key={i}
-                  className="word"
-                  style={{ animationDelay: `${i * 0.3}s` }}
-                >
-                  {word}
-                </span>
-              ))}
-            </h1>
-          </div> */}
           <div className="animation-wrapper">
             <div className="svg-title">
               <TitleSVG className="animated-svg" />
@@ -53,7 +40,6 @@ const Home = () => {
       {/* --- Projects Section --- */}
       <section id="projects">
         <div className="projects-container">
-          {/* <h1>{t("projects.title")}</h1> */}
           <VideoGallery />
         </div>
       </section>

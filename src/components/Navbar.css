@@ -110,7 +110,7 @@ html.rtl .nav-link::after {
 
 .line {
   width: 24px;
-  height: 1px;
+  height: 1.5px;
   background: var(--primary-color);
   transition: all 0.3s ease;
 }
@@ -119,7 +119,6 @@ html.rtl .nav-link::after {
 }
 .burger .line:nth-child(2) {
   width: 14px;
-  height: 1px;
 }
 .burger .line:nth-child(3) {
   width: 18px;

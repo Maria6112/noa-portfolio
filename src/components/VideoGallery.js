@@ -11,7 +11,7 @@ const translations = {
       { title: "M | Y" },
       { title: "O | R" },
       { title: "A | I" },
-      { title: "Beach Memories" },
+      { title: "A | A" },
     ],
   },
   he: {
@@ -20,7 +20,7 @@ const translations = {
       { title: "מיכל | יהודה" },
       { title: "רוני | עוז" },
       { title: "שובל אביגיל | יצחק" },
-      { title: "זכרונות מהחוף" },
+      { title: " אבישי | אילהה" },
     ],
   },
 };
@@ -49,6 +49,12 @@ const videoSources = [
     type: "youtube",
     videoUrl: "https://www.youtube.com/embed/qA21dZoZ1Cg?si=MuTxb4nq3r0tW1Vy",
     thumbnail: "/images/sh&i.png",
+  },
+  {
+    id: "5",
+    type: "youtube",
+    videoUrl: "https://www.youtube.com/embed/7z2cSXlNK18?si=249qEKVdylWQZpDh",
+    thumbnail: "/images/A&A5.jpg",
   },
   // {
   //   id: "5",

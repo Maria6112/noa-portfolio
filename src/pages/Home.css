@@ -126,16 +126,6 @@ html.rtl .animation-title span {
   align-items: flex-start;
 }
 
-/* .svg-title svg {
-  display: block;
-  margin: 0 auto;
-  height: auto;
-  width: 60%;
-  opacity: 0;
-  animation: fadeIn 1s ease forwards;
-  animation-delay: 0.3s;
-} */
-
 .animated-svg {
   width: 50%;
   padding-top: 20px;
@@ -151,20 +141,6 @@ html.rtl .animation-title span {
 @keyframes fadeIn {
   to {
     opacity: 1;
-  }
-}
-
-/* Если у SVG есть stroke (контур), можно сделать эффект рисования */
-.animated-svg path {
-  fill: var(--primary-color);
-  stroke-dasharray: 1000;
-  stroke-dashoffset: 1000;
-  animation: draw 2s ease forwards;
-}
-
-@keyframes draw {
-  to {
-    stroke-dashoffset: 0;
   }
 }
 
