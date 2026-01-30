@@ -3,7 +3,14 @@ import "./Navbar.css";
 import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "./LanguageSwitcher";
 // import logo from "images/logo192.png";
-const SECTION_IDS = ["home", "projects", "packages", "about", "contact"];
+const SECTION_IDS = [
+  "home",
+  "projects",
+  "packages",
+  "shorts",
+  "about",
+  "contact",
+];
 
 const Navbar = () => {
   const { t, i18n } = useTranslation();
@@ -19,12 +26,12 @@ const Navbar = () => {
   const navItems = useMemo(
     () => [
       { href: "#home", label: t("nav.home") },
-      // { href: "#projects", label: t("nav.projects") },
+      { href: "#shorts", label: t("nav.shorts") },
       // { href: "#packages", label: t("nav.packages") },
       { href: "#about", label: t("nav.about") },
       { href: "#contact", label: t("nav.contact") },
     ],
-    [t]
+    [t],
   );
 
   // Обработчик клика по логотипу — скроллим наверх и делаем #home активным
@@ -49,19 +56,10 @@ const Navbar = () => {
     window.history.replaceState(null, "", href);
   };
 
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     setScrolled(window.scrollY > 200); // если проскроллено больше 10px — ставим true
-  //   };
-
-  //   window.addEventListener("scroll", handleScroll);
-  //   return () => window.removeEventListener("scroll", handleScroll);
-  // }, []);
-
   // IntersectionObserver — следим за секциями и ставим active
   useEffect(() => {
     const sections = SECTION_IDS.map((id) =>
-      document.getElementById(id)
+      document.getElementById(id),
     ).filter(Boolean);
 
     if (!sections.length) return;

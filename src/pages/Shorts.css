@@ -148,25 +148,20 @@
 }
 
 @media (max-width: 768px) {
-  .shorts-container {
-    padding: 40px 16px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-  }
   .shorts-section {
-    grid-template-columns: 380px;
-    gap: 20px;
-    max-width: 400px;
-    justify-content: center !important;
-    align-items: center;
+    grid-template-columns: 350px;
   }
   .shorts-card {
-    width: 350px;
-    height: 600px;
-  }
-  .tiktok-embed-container {
-    min-height: 560px;
+    max-width: 350px;
+    max-height: 610px;
   }
 }
+/* @media (max-width: 400px) {
+  .shorts-section {
+    grid-template-columns: 350px;
+  }
+  .shorts-card {
+    max-width: 350px;
+    max-height: 610px;
+  }
+} */

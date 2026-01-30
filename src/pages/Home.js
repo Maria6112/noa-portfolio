@@ -5,6 +5,7 @@ import { useTranslation } from "react-i18next";
 import "./Home.css";
 import { ReactComponent as TitleSVG_HE } from "../styles/font1.svg";
 import { ReactComponent as TitleSVG_EN } from "../styles/font.svg";
+import Shorts from "./Shorts";
 
 const Home = () => {
   const { i18n, t } = useTranslation();
