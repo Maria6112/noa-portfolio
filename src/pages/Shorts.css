@@ -55,7 +55,7 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  /* gap: 8px; */
   flex-shrink: 0; /* НЕ СЖИМАЕТСЯ */
 }
 /* Верхняя полоска */
@@ -101,12 +101,11 @@
 }
 
 .shorts-title {
-  font-size: 1rem;
-  /* font-size: 20px; */
+  /* font-size: 1rem; */
+  font-size: 22px;
   font-weight: 500;
   color: var(--primary-color);
   margin: 0;
-  /* padding: 4px 0 0 0; */
   font-family: var(--he-font);
 }
 
@@ -148,7 +147,9 @@
     justify-content: center !important;
     direction: ltr !important;
   }
-
+  .shorts-container h1 {
+    margin-bottom: 40px;
+  }
   .shorts-section {
     display: flex !important;
     flex-direction: column;
@@ -164,7 +165,18 @@
   }
 
   .shorts-title {
-    font-size: 0.9rem !important;
-    margin-top: 8px;
+    font-size: 24px !important;
+    /* margin-top: 8px; */
+  }
+}
+@media (max-width: 400px) {
+  .shorts-card {
+    transform: scale(0.8) !important;
+    transform-origin: center top;
+    /* margin: 0 auto; */
+    margin-bottom: -50px;
+  }
+  .shorts-title {
+    font-size: 24px !important;
   }
 }

@@ -149,3 +149,9 @@ html.rtl .contact-buttons {
     left: 0;
   }
 }
+@media (max-width: 400px) {
+  .contact-buttons {
+    transform: scale(0.7) !important;
+    transform-origin: center top;
+  }
+}

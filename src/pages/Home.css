@@ -92,7 +92,7 @@ html.rtl .animation-title span {
 @keyframes growLine {
   to {
     height: 150px; /* итоговая высота полосы */
-    background: linear-gradient(to bottom, #000, #aaa);
+    background: linear-gradient(to bottom, #685554, #aaa);
   }
 }
 .word {
