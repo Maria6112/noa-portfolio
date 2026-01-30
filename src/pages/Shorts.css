@@ -166,18 +166,19 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
   }
 
   .shorts-section {
     grid-template-columns: 1fr;
     justify-content: center;
     align-items: center;
-    gap: 0px 25px;
+    gap: 0px 15px;
   }
   .shorts-card {
     transform: scale(0.85) !important;
     transform-origin: center top;
-    margin: 0 auto;
+    /* margin: 0 auto; */
   }
 
   .shorts-title {
