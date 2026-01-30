@@ -11,6 +11,10 @@ const Shorts = () => {
       : ["T | Y", "H | E", "A | A", "S | E"];
   const tiktokVideos = [
     {
+      id: "7576210667137518868",
+      title: videoTitles[2],
+    },
+    {
       id: "7568750850852539669",
       title: videoTitles[0],
     },
@@ -18,10 +22,7 @@ const Shorts = () => {
       id: "7586244486888459541",
       title: videoTitles[1],
     },
-    {
-      id: "7576210667137518868",
-      title: videoTitles[2],
-    },
+
     {
       id: "7583626496154094868",
       title: videoTitles[3],
