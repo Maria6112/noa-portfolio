@@ -25,7 +25,7 @@
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
-  font-family: var(--animation-font);
+  /* font-family: var(--animation-font); */
 }
 
 /* ✅ 4 КАРТОЧКИ В РЯД */
@@ -38,31 +38,9 @@
   justify-content: center;
 }
 
-/* ✅ МИНИМАЛЬНЫЕ ОТОСТУПЫ — видео edge-to-edge */
-/* .shorts-card {
-  background: rgba(255, 255, 255, 0.9);
-  backdrop-filter: blur(20px);
-  border: 1px solid rgba(101, 79, 49, 0.15);
-  border-radius: 16px;
-  padding: 12px; 
-  box-shadow:
-    0 4px 16px rgba(101, 79, 49, 0.08),
-    inset 0 1px 0 rgba(233, 228, 219, 0.9);
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  position: relative;
-  overflow: hidden;
-  height: 620px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-} */
-
 .shorts-card {
-  /* ✅ ФИКСИРОВАННЫЕ РАЗМЕРЫ НА ВСЕХ ЭКРАНАХ */
-  width: 360px !important; /* ← ГЛАВНОЕ! */
-  height: 620px !important; /* ← ГЛАВНОЕ! */
-  /* max-width: 380px;
-  min-width: 380px; */
+  width: 360px !important;
+  height: 620px !important;
 
   background: rgba(255, 255, 255, 0.9);
   backdrop-filter: blur(20px);
@@ -124,11 +102,12 @@
 
 .shorts-title {
   font-size: 1rem;
-  font-weight: 600;
+  /* font-size: 20px; */
+  font-weight: 500;
   color: var(--primary-color);
   margin: 0;
-  padding: 4px 0 0 0;
-  font-family: var(--secondary-font);
+  /* padding: 4px 0 0 0; */
+  font-family: var(--he-font);
 }
 
 @media (max-width: 1400px) {
