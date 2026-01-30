@@ -118,9 +118,15 @@ html.rtl .contact-buttons {
 }
 
 .contact-btn.tiktok {
-  background: linear-gradient(135deg, #ee1d52 0%, #ff0050 50%, #69c9d0 100%);
+  color: #fff; /* White musical note on a dark background */
+  font-size: 3em; /* Adjust size as needed */
+  background-color: #000; /* Optional: black background */
+  text-shadow:
+    -2px -2px 0 #25f4ee,
+    2px 2px 0 #fe2c55;
+  /* background: linear-gradient(135deg, #ee1d52 0%, #ff0050 50%, #69c9d0 100%);
   color: white;
-  box-shadow: 0 6px 20px rgba(238, 29, 82, 0.4);
+  box-shadow: 0 6px 20px rgba(238, 29, 82, 0.4); */
 }
 
 /* Мобильная адаптация */
