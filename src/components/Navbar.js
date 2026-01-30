@@ -16,7 +16,7 @@ const Navbar = () => {
   const { t, i18n } = useTranslation();
   const [menuOpen, setMenuOpen] = useState(false);
   const [active, setActive] = useState(window.location.hash || "#home");
-  const [scrolled, setScrolled] = useState(false);
+  const [scrolled] = useState(false);
 
   const observerRef = useRef(null);
   const burgerRef = useRef(null);
