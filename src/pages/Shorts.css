@@ -31,19 +31,20 @@
 /* ✅ 4 КАРТОЧКИ В РЯД */
 .shorts-section {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 360px);
   gap: 55px;
-  max-width: 1600px;
-  margin: 0 auto;
+  max-width: fit-content; /* ← Авто ширина */
+  margin: 0 auto; /* ← Центрирование */
+  justify-content: center;
 }
 
 /* ✅ МИНИМАЛЬНЫЕ ОТОСТУПЫ — видео edge-to-edge */
-.shorts-card {
+/* .shorts-card {
   background: rgba(255, 255, 255, 0.9);
   backdrop-filter: blur(20px);
-  border: 1px solid rgba(101, 79, 49, 0.15); /* Очень тонкая */
-  border-radius: 16px; /* Меньше скругление */
-  padding: 12px; /* ← МИНИМУМ! было 24px */
+  border: 1px solid rgba(101, 79, 49, 0.15);
+  border-radius: 16px;
+  padding: 12px; 
   box-shadow:
     0 4px 16px rgba(101, 79, 49, 0.08),
     inset 0 1px 0 rgba(233, 228, 219, 0.9);
@@ -53,9 +54,32 @@
   height: 620px;
   display: flex;
   flex-direction: column;
-  gap: 8px; /* ← Маленький зазор */
-}
+  gap: 8px;
+} */
 
+.shorts-card {
+  /* ✅ ФИКСИРОВАННЫЕ РАЗМЕРЫ НА ВСЕХ ЭКРАНАХ */
+  width: 360px !important; /* ← ГЛАВНОЕ! */
+  height: 620px !important; /* ← ГЛАВНОЕ! */
+  /* max-width: 380px;
+  min-width: 380px; */
+
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(101, 79, 49, 0.15);
+  border-radius: 16px;
+  padding: 12px;
+  box-shadow:
+    0 4px 16px rgba(101, 79, 49, 0.08),
+    inset 0 1px 0 rgba(233, 228, 219, 0.9);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex-shrink: 0; /* НЕ СЖИМАЕТСЯ */
+}
 /* Верхняя полоска */
 .shorts-card::before {
   content: "";
@@ -80,11 +104,10 @@
 .tiktok-embed-container {
   position: relative;
   flex: 1;
-  min-height: 540px; /* Больше места для видео */
-  border-radius: 12px; /* Меньше скругление */
+  min-height: 540px;
+  border-radius: 12px;
   overflow: hidden;
-  margin: 0; /* ← УБРАЛИ отступ снизу */
-  /* Максимально тонкая рамка */
+  margin: 0;
   border: 1px solid rgba(101, 79, 49, 0.08);
   box-shadow: 0 4px 16px rgba(101, 79, 49, 0.06);
 }
@@ -110,14 +133,14 @@
 
 @media (max-width: 1400px) {
   .shorts-section {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 380px);
     gap: 20px;
   }
 }
 
 @media (max-width: 1100px) {
   .shorts-section {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 380px);
     gap: 20px;
     justify-content: center;
     max-width: 750px;
@@ -133,14 +156,17 @@
     justify-content: flex-start;
   }
   .shorts-section {
-    grid-template-columns: 1fr;
+    grid-template-columns: 380px;
     gap: 20px;
     max-width: 400px;
     justify-content: center !important;
     align-items: center;
   }
   .shorts-card {
-    width: 300px;
-    height: 450px;
+    width: 350px;
+    height: 600px;
+  }
+  .tiktok-embed-container {
+    min-height: 560px;
   }
 }

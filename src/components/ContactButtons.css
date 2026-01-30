@@ -124,7 +124,7 @@ html.rtl .contact-buttons {
 }
 
 /* Мобильная адаптация */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .contact-buttons {
     /* top: auto;
     bottom: 10px;
