@@ -3,44 +3,28 @@ import { useTranslation } from "react-i18next";
 import "./Shorts.css";
 
 const Shorts = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
-  const translations = {
-    en: {
-      videos: [
-        { title: "T | Y" },
-        { title: "H | E" },
-        { title: "A | A" },
-        { title: "S | I" },
-        { title: "S | E" },
-      ],
-    },
-    he: {
-      videos: [
-        { title: "תמה | יאיר" },
-        { title: " הלל | אלי" },
-        { title: "אבישי | אילהה" },
-        { title: "שובל אביגיל | יצחק" },
-        { title: "ספיר | אילה" },
-      ],
-    },
-  };
+  const videoTitles =
+    i18n.language === "he"
+      ? ["תמה | יאיר", " הלל | אלי", "אבישי | אילהה", "ספיר | אילה"]
+      : ["T | Y", "H | E", "A | A", "S | E"];
   const tiktokVideos = [
     {
       id: "7568750850852539669",
-      title: "תמה | יאיר",
+      title: videoTitles[0],
     },
     {
       id: "7586244486888459541",
-      title: " הלל | אלי",
+      title: videoTitles[1],
     },
     {
       id: "7576210667137518868",
-      title: "אבישי | אילהה",
+      title: videoTitles[2],
     },
     {
       id: "7583626496154094868",
-      title: "ספיר | אילה",
+      title: videoTitles[3],
     },
   ];
   return (
