@@ -1,5 +1,11 @@
 import React from "react";
-import { FaWhatsapp, FaTelegramPlane } from "react-icons/fa";
+import {
+  FaWhatsapp,
+  FaTelegramPlane,
+  FaVimeo,
+  FaYoutube,
+  FaTiktok,
+} from "react-icons/fa";
 import "./ContactButtons.css";
 
 const ContactButtons = () => {
@@ -20,6 +26,30 @@ const ContactButtons = () => {
         className="contact-btn telegram"
       >
         <FaTelegramPlane className="icon" />
+      </a>
+      <a
+        href="https://vimeo.com/user247096073"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="contact-btn vimeo"
+      >
+        <FaVimeo className="icon" />
+      </a>
+      <a
+        href="https://www.youtube.com/@LIBAFILMS"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="contact-btn youtube"
+      >
+        <FaYoutube className="icon" />
+      </a>
+      <a
+        href="https://www.tiktok.com/@liba.films"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="contact-btn tiktok"
+      >
+        <FaTiktok className="icon" />
       </a>
     </div>
   );

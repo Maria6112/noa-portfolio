@@ -58,5 +58,8 @@
   "footer": {
     "contacts": "Contacts",
     "rights": " Liba Films. All rights reserved"
+  },
+  "shorts": {
+    "shortsh1": "Shorts"
   }
 }

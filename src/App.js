@@ -10,6 +10,7 @@ import Footer from "./components/Footer";
 import ContactButtons from "./components/ContactButtons";
 import ContactForm from "./pages/ContactMe";
 import AOS from "aos";
+import Shorts from "./pages/Shorts";
 import AboutMe from "./pages/About";
 import { useTranslation } from "react-i18next";
 
@@ -40,6 +41,9 @@ function App() {
       {/* <section id="packages">
         <Packages />
       </section> */}
+      <section id="shorts">
+        <Shorts />
+      </section>
 
       <section id="about">
         <AboutMe />

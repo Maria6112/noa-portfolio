@@ -26,6 +26,28 @@ html {
   margin: 0;
   padding: 0;
 }
+html,
+body {
+  width: 100%;
+  /* overflow-x: hidden; */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Для всех контейнеров с прокруткой */
+*::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
 /* html.ltr,
 body.ltr {
   font-family: var(--he-font);

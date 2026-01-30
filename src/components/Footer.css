@@ -49,18 +49,11 @@ h4 {
   margin-bottom: 5px;
 }
 
-/* .icon-btn-whatsapp,
-.icon-btn-telegram,
-.icon-btn-tiktok {
-  color: var(--primary-color);
-
-  text-decoration: none;
-  transition: transform 0.3s ease;
-  margin: 5px;
-} */
 .icon-btn-whatsapp,
 .icon-btn-telegram,
-.icon-btn-tiktok {
+.icon-btn-tiktok,
+.icon-btn-vimeo,
+.icon-btn-youtube {
   background-color: transparent;
   border-radius: 50%; /* ВАЖНО */
 
@@ -72,7 +65,10 @@ h4 {
   align-items: center;
   justify-content: center;
   font-size: 22px;
-  transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+  transition:
+    color 0.3s ease,
+    background-color 0.3s ease,
+    transform 0.3s ease;
   margin: 5px;
 }
 
@@ -90,9 +86,6 @@ h4 {
 
   transform: scale(1.1);
 }
-/* .icon-btn-tiktok {
-  border: 1px solid var(--primary-color);
-} */
 
 .icon-btn-tiktok:hover {
   background-color: #000;
@@ -101,7 +94,20 @@ h4 {
   color: #fff;
   transform: scale(1.1);
 }
-
+.icon-btn-vimeo:hover {
+  color: white;
+  transform: scale(1.1);
+  background: linear-gradient(135deg, #1ab7ea 0%, #0f9fd9 100%);
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(26, 183, 234, 0.4);
+}
+.icon-btn-youtube:hover {
+  color: white;
+  transform: scale(1.1);
+  background: linear-gradient(135deg, #ff0000 0%, #cc0000 100%);
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(255, 0, 0, 0.4);
+}
 .phone-number {
   font-size: 20px;
   color: var(--primary-color);
@@ -111,7 +117,6 @@ h4 {
   border-top: 1px solid var(--primary-color);
   padding-top: 16px;
   font-size: 16px;
-  /* color: white; */
   color: var(--primary-color);
 }
 

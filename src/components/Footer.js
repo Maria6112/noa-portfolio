@@ -5,6 +5,8 @@ import {
   FaTelegramPlane,
   FaPhone,
   FaTiktok,
+  FaVimeo,
+  FaYoutube,
 } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
 
@@ -43,6 +45,22 @@ const Footer = () => {
               className="icon-btn-telegram"
             >
               <FaTelegramPlane size={25} />
+            </a>
+            <a
+              href="https://vimeo.com/user247096073"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="icon-btn-vimeo"
+            >
+              <FaVimeo size={25} />
+            </a>
+            <a
+              href="https://www.youtube.com/@LIBAFILMS"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="icon-btn-youtube"
+            >
+              <FaYoutube size={25} />
             </a>
           </div>
 
